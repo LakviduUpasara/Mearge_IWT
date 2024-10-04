@@ -1,0 +1,59 @@
+/* General Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dadddf;
+    background-size: cover;
+}
+
+  .notice-conetent{
+
+    border-width: 2px;
+    background-color: #fff !important;
+    padding: 6px 5px!important ;
+    margin: 10px 0;
+  }
+  .notice-conetent h5{
+    text-align: justify;
+    margin: 2px 2px 2px ,2px;
+    padding: 2px ,2px ,2px,2px;
+  }
+  .note-heading{
+
+    border-width: 1px;
+    background-color: #e22f13 !important;
+    padding: 2px 2px!important ;
+    margin: 5px 0;
+    color: white;
+   
+
+  }
+  .note-heading h2{
+
+
+    color: white;
+    margin-left: 10 px;
+   
+
+  }
+/* Announcement */
+.announcement {
+    margin: 20px;
+}
+
+.announcement-heading {
+    text-align: center;
+    font-size: 2em;
+    color: #0d0b56;
+}
+
+.announcement-content h1 {
+    font-size: 1.5em;
+}
+
+.announcement-content h5 {
+    font-size: 1.2em;
+    color: #555;
+}
+
+

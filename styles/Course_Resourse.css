@@ -1,0 +1,93 @@
+/
+.form-resource {
+    width: 400px; 
+    padding: 20px;
+    margin: 20px auto; 
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-elements {
+    margin-bottom: 15px;
+}
+
+
+.form-elements label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-elements input[type="text"] {
+    width: 100%; 
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.display-full-content {
+    display: flex;
+    flex-direction: column;
+    margin: 20px; 
+}
+
+.resource-container {
+    border: 1px solid #ddd; 
+    padding: 15px; 
+    margin-bottom: 15px; 
+    border-radius: 5px; 
+    background-color: #f9f9f9;
+}
+
+.resource-heading{
+    background-color: goldenrod;
+    padding: 10px 10px 10px 10px ;
+
+}
+
+.resource-heading h2 {
+    font-size: 20px; 
+    color: #333; 
+    margin: 10px;
+}
+
+.resource-body h4 {
+    font-size: 16px;
+    color: #555; 
+}
+
+.resource-body a {
+    text-decoration: none; 
+    color: #007BFF; 
+}
+
+.resource-body a:hover {
+    text-decoration: underline; 
+}
+
+
+
+.button-container {
+    display: flex;
+    align-items: center;
+    margin-left: 300px;
+}
+
+.button-container .resource-btn {
+
+    margin: 25px 25px 25px 25px;
+    padding: 10px;
+
+}
+
+.button-container .resource-btn button {
+
+     background-color: blue ;
+     width: 150px;
+     height: 40px;
+     color: white;
+}

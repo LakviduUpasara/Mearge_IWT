@@ -1,0 +1,287 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dadddf;
+    background-size: cover;
+}
+
+  /* Courses Section */
+
+
+.courses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+    
+
+.image-container {
+    position: relative;
+    width: 300px; /* Adjust the size of the container */
+    height: 200px; /* Adjust based on your image size */
+}
+
+.image-container img {
+    width: 100%; /* Make the image fit the container */
+    height: 100%; /* Adjust to container height */
+    display: block;
+}
+
+.overlay-content {
+    position: absolute; /* Absolute positioning relative to the image container */
+    top: 0; /* Position it at the top of the image */
+    left: 0; /* Position it at the left of the image */
+    width: 100%; /* Full width of the container */
+    height: 100%; /* Full height of the container */
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent dark background */
+    color: white; /* White text for contrast */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the content vertically */
+    align-items: center; /* Center the content horizontally */
+    text-align: center; /* Center the text */
+}
+
+.overlay-content h2, .overlay-content p {
+    margin: 0;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+.course-box {
+    background-color: #bababa;
+    padding: 20px; 
+    text-align: left;
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    margin: 25px 30px 25px 25px ;
+    position: relative; 
+    display: inline-block;
+}
+
+
+.course-box img {
+    width: 120px;
+    border-radius: 5px;
+}
+
+.course-box h2 {
+    font-size: 1.5em;
+}
+ .popup{
+
+    position: absolute;
+    top:-150%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%,-50%) scale(1.25);
+    width: 450px;
+    padding: 20px 30px;
+    background: #ffffff;
+    box-shadow: 2px 2px 5px 5px rgba(0,0,0,0,15);
+    border-radius: 10px;
+    height: 70vh;
+    transition: top 0ms ease-in-out 200ms ,
+                opacity 200ms ease-in-out 0ms ,
+                transform 20ms ease-in-out 0ms ;
+
+
+}
+
+.popup.active{
+
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1);
+    transition: top 0ms ease-in-out 0ms ,
+    opacity 200ms ease-in-out 0ms ,
+    transform 20ms ease-in-out 0ms ;
+
+}
+.popup .close-btn {
+
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background: #888;
+    color: #eee;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+
+.popup  .form-elements {
+    margin: 15px 0px;
+    position: relative;
+}
+
+.popup .form-elements label {
+
+    font-size: 14px;
+    color: #222;
+
+}
+.popup .form-elements input[type ="text"] ,
+.popup .form-elements input[type ="password"]{
+    
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+}
+.popup .form-elements input[type ="checkbox"] {
+    margin-right: 5px;
+    
+}
+.popup  .form-elements button
+ {
+    
+    width: 100%;
+    height: 5vh;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: #222;
+    color: #f5f5f5;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.popup  .form-elements a {
+
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    color: #1a79ca;
+    text-decoration: none;
+    font-weight: 600;
+    
+}
+
+.popup.form-elements .dnt-acc{
+    text-align: center;
+    text-decoration: underline;
+    color: #030303;
+}
+.button-container {
+    display: flex;
+    align-items: center;
+    margin-left: 450px;
+}
+.course-btn{
+
+    display: inline-block;
+    margin-left: 10px;
+    padding: 10px;
+}
+
+#create-course-btn {
+    background-color: #2F4F7F;
+    color: #FFFFFF; 
+    border: none; 
+    padding: 10px; 
+    font-size: 16px; 
+    cursor: pointer; 
+  }
+#create-course-btn:hover {
+    background-color: #96a521; 
+  }
+#Update-course-btn
+{
+    background-color: #122553;
+    color: #FFFFFF; 
+    border: none; 
+    padding: 10px; 
+    font-size: 16px; 
+    cursor: pointer; 
+}
+#Update-course-btn:hover {
+
+    background-color: #21a54b; 
+  }
+#delete-course-btn
+{
+    background-color: #122553;
+    color: #FFFFFF; 
+    border: none; 
+    padding: 10px; 
+    font-size: 16px; 
+    cursor: pointer; 
+}
+#delete-course-btn:hover {
+
+    background-color: #a54021; 
+  }
+#create-course-heding{
+
+    text-align: center;
+    color: #222;
+    margin: 10px 0px 20px ;
+    font-size: 20px;
+
+
+}
+#course_image{
+    padding: 2px;
+    margin: 2px;
+    background-color: rgb(151, 38, 38);
+    width: 300px;
+}
+#create-course{
+
+    width: 100%;
+    height: 5vh;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: #222;
+    color: #f5f5f5;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.courses-section{
+
+    text-align: center;
+    padding: 10px;
+    margin: center;
+    color: #122553;
+}
+.popup .submit-button-style
+{
+    width: 100%;
+    height: 5vh;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: #222;
+    color: #f5f5f5;
+    border-radius: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.hidden-button {
+    display: none;
+}
+.footer-setup
+{
+  margin-bottom: 90%;
+  padding: 150px;
+
+}
+.display-full-content{
+    display: contents;
+    align-items: center;
+    margin-right: 20%;
+    padding-left: 20px;
+
+}

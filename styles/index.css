@@ -1,0 +1,73 @@
+/*default styling in page*/
+*{                          
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    background-image: url("../images/background3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(background3.jpg);
+    background-size:auto;
+    background-position: center;
+}
+
+/*about us styling*/
+.about-us{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color:white;
+}
+.about-us h1{
+    font-size: 40px;
+    margin-top: 30px;
+}
+.about-us p{
+    margin: 2px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+/*button styling*/
+.home-btn{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span{
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border: none;
+}
