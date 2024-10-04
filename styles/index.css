@@ -1,4 +1,4 @@
-/* Nadeeja - home page css */
+/*default styling in page*/
 *{                          
     margin: 0;
     padding: 0;
@@ -71,4 +71,3 @@ button:hover span{
 button:hover{
     border: none;
 }
-
