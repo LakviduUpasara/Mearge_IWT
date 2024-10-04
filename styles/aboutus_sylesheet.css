@@ -1,0 +1,154 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fbfbfb;
+    max-width: 100%;
+    margin: 0;;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 40px 16px;
+}
+
+.about_us {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.about_us h1 {
+    font-size: 60px;
+    font-weight: 800;
+    color: #0d0b56;
+}
+
+.about_us .underline {
+    margin-top: 8px;
+    border-top: 4px solid #f1e108;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vision_mission {
+    background-color: #0d0b56;
+    box-shadow: 0 4px 6px rgba(235, 250, 22, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 32px;
+    max-width: 100%;
+    width: 900px;
+    margin-left: 300px;
+    transition: transform 0.3s ease;
+}
+.vision_mission:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+.vision_mission .content {
+    display: flex;
+    align-items: center;
+    padding: 25px;
+}
+
+.vision_mission .content img {
+    border-radius: 9999px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vision_mission .content .text {
+    padding-left: 24px;
+    width: 66.666667%;
+}
+
+.vision_mission .content .text h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #f1e108;
+}
+
+.vision_mission .content .text p {
+    color: #ffffff;
+    margin-top: 8px;
+}
+
+/*team member card*/
+
+.title h1
+{
+    margin-bottom: -50px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    font-weight: 60px;
+}
+.team-member-card
+{
+    max-width: 950px;
+    max-width: 100%;
+    padding: 80px 0;;
+}
+.team-member-card .main-card{
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 100%;
+    transition: 1s;
+}
+.team-member-card .main-card .cards
+{
+    max-width: 100%;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Ensure cards are centered */
+    margin: 20px 0px;
+    /*margin : 20px 0px 75px -500px;
+    justify-content: space-between;*/
+}
+.main-card .cards .card{
+    width: 40px;
+    margin: 15px;
+    background-color: #0d0b56;
+    border-radius: 12px;
+    padding: 100px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.4s ease;
+}
+.main-card .cards .card:hover{
+    transform: translateY(-15px);
+}
+.cards .card .content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+.cards .card .content .img{
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    padding: 3px;
+    background: #e0f401;
+    margin-bottom: 14px;
+}
+.card .content .img img{
+    height: 100%;
+    width: 100%;
+    border: 3px solid #0d0b56;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.card .content .name{
+    font-size: 20px;
+    font-weight: 500;
+}
+.card .content .job{
+    font-size: 20px;
+    color: #e0f401;
+}
+

@@ -1,0 +1,169 @@
+
+/*imesha*/
+
+/*content*/
+.content h2 {
+  margin-top: 5px;
+  color: #ffee10;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 25px;
+}
+
+/*announcements*/
+.Annu-table{
+  width: 70%;
+  margin: 0 auto 25px;
+  border: solid 3px #fff;
+
+}
+.Annu-table th{
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+.Annu-table th, .Annu-table td {
+  border: 2px solid #fff;
+  padding: 10px;
+  text-align: left;
+  background-color: #f6f7f9;
+}
+
+/* tickets*/
+fieldset{
+  border: none;
+  margin: 0 auto;
+  text-align: center;
+  width: 70%;
+  justify-items: center;
+}
+.table {
+  width: 100%; 
+  margin: 0 auto;  
+}
+.table th, .table td {
+  border: 2px solid #fff;
+  padding: 10px;
+  text-align: left;
+  background-color: #f2f2f2;
+}
+.button-grp {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  float: right;
+}
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 20px 0 20px 60px;
+}
+.button:hover{
+  cursor: pointer;
+  background-color: #fff;
+  border-style: solid;
+  color: #007bff;
+  border-color: #0d0b56;
+}
+
+/*search*/
+.box{
+  position: relative;
+}
+
+.input {
+  padding: 10px;
+  width: 80px;
+  height: 40px;
+  background: none;
+  border: 2px solid #007bff;
+  border-radius: 40px;
+  box-sizing: border-box;
+  color: #000000;
+  outline: none;
+  transition: .4s;
+}
+.box:hover input{
+  width: 400px;
+  background: #f2f2f2;
+  border-radius: 50px;
+}
+.box i{
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translate(-50%,-50%);
+  font-size: 26px;
+  color: #ffd52d;
+  transition: .2s;
+}
+.box:hover i{
+  opacity: 0;
+  z-index: -1;
+}
+
+/* reply pop up*/
+.Pop-reply{
+  border: solid 3px #007bff;
+  margin: 0 auto;
+  width:450px;
+  height: 450px;
+  border-radius: 6px;
+  position: absolute;
+  top: 50% ;
+  left: 50%;
+  transform: translate(-50%,-50%)scale(0.8);
+  padding: 10px 30px ;
+  background: #fff;
+  visibility: hidden;
+  transition: transform 0.4s, visibility 0.4s;
+  z-index: 1000; /* above all*/
+}
+/*delete popup*/
+.Pop-del{
+  border: solid 3px #007bff;
+  margin: 0 auto 0 10px;
+  width:250px;
+  height: 150px;
+  border-radius: 6px;
+  position: absolute;
+  top: 50% ;
+  left: 50%;
+  transform: translate(-50%,-50%)scale(0.8);
+  padding: 10px 30px ;
+  background: #fff;
+  visibility: hidden;
+  transition: transform 0.4s, visibility 0.4s;
+  z-index: 1000; /* above all*/
+}
+.Pop-reply label, .Pop-del label{
+  color: #000000;
+  font-weight: bold;
+}
+.Pop-reply button{
+  float: inline-end;
+  margin-bottom: 100%;
+}
+.Pop-reply textarea{
+  font-size: 16px;
+  padding-top: 20px;
+  width:  400px;
+  border: solid 3px #ccc;
+  height: 50%;
+}
+.openPopRpl, .openPopDel{
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%,-50%) scale(1);
+  z-index: 1000;
+}
+/*active window*/
+.nav:active{
+  background-color: #f6f7f9;
+  color: #0d0b56;
+  padding-block: 5px;
+}

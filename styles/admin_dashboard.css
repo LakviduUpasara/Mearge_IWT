@@ -1,0 +1,364 @@
+/* Nadeeja - admin dashboard css */
+
+body{
+    font-family: sans-serif;
+}
+.logout-side{
+
+    margin-right: 15px;
+}
+.logout-side .logout-label {
+    color: white; 
+    text-decoration: none; 
+    letter-spacing: 2px;
+    transition: 0.5s; 
+    text-align: center;
+}
+
+.logout-side .logout-label:hover {
+    color: red; /* Changes color to red on hover */
+    padding: 10px; /* Adds padding on hover */
+    transition: 0.5s; /* Transition effect for color and padding */
+}
+.logout-side .profile{
+
+    align-items: center;
+}
+
+
+.logo {
+    width: 120px;
+    cursor: pointer;
+    margin-left: 50px;
+}
+
+
+.navbar {
+    width: 100%;
+    margin: auto;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0d0b56;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* feedback for slide */
+.feedback-tricker{
+    display: flex;
+    gap: 1rem;
+    height:40px;
+    max-width: 90%;
+    margin: 3rem auto;
+}
+.label{
+    white-space: nowrap;
+    background: #009688;
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    position: relative;
+    
+    
+}
+.label::after{
+    content: '';
+    position: absolute;
+    right: -20px;
+    border: 10px solid transparent;
+    border-left-color: #009688;
+}
+.headlines{
+    list-style: none;
+    padding-right: 10px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color:#fff;
+    margin-left: -6px;
+    margin-top: -0.7px;
+}
+.headlines li{
+    color: #000;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    line-height: 40px;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    transition: all 1s ease-in-out;
+}
+.headlines li.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Course for slide */
+.slider {
+    margin: 20px; 
+    position: relative;
+    width: 25%; 
+    overflow: hidden;
+    border-radius: 10px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); 
+    float: left; 
+}
+.slider img {
+    width: 100%;
+    display: none;
+    border: 5px solid #ffffff; 
+    border-radius: 10px; 
+    transition: transform 0.5s ease, box-shadow 0.5s ease; 
+}
+
+img.displaySlide {
+    display: block;
+    transform: scale(1.05); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); 
+}
+
+.slider img:hover {
+    transform: scale(1.1); 
+    z-index: 2; 
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: white;
+    border: none;
+    padding: 10px 15px; 
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 5px; 
+    transition: background-color 0.3s ease; 
+}
+
+button.prev:hover, button.next:hover {
+    background-color: rgba(0, 0, 0, 0.9); 
+}
+
+button.prev {
+    left: 10px; 
+}
+
+button.next {
+    right: 10px; 
+}
+
+/* Lecture team popup */
+/*Open button*/
+button.obtn {
+    background-image: linear-gradient(to right, #0d0b56, #032bb0);
+    border-radius: 20px;
+    border: 0;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    color: white;
+    cursor: pointer;
+    padding: 10px 25px;
+    margin-left: 10%;
+    margin-top: 10%;
+    width:200px;
+    height: 50px;
+    font-size: 18px;    
+}
+button.obtn:active {
+    opacity: 0.8;
+}
+/*Close button*/
+button.cbtn {
+    background-image: linear-gradient(to right, #0d0b56, #032bb0);
+    border-radius: 20px;
+    border: 0;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    color: white;
+    cursor: pointer;
+    padding: 10px 25px;   
+}
+button.cbtn:active {
+    opacity: 0.8;
+}
+.modal {
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal.open {
+    opacity: 1;
+    z-index: 999;
+}
+.modal-inner {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    padding: 15px 25px;
+    text-align: center;
+    width: 380px;
+    max-height: 80vh; /* Set maximum height */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+.modal-inner h2 {
+    margin: 0;
+}
+.modal-inner p {
+    line-height: 24px;
+    margin: 10px 0;
+}
+.lecture-details {
+    margin-top: 10px;
+}
+
+.lecture-details ul {
+    list-style-type: none; 
+    padding: 0; 
+}
+
+.lecture-details li {
+    margin-bottom: 15px; 
+    border-bottom: 1px solid #ccc; 
+    padding-bottom: 10px; 
+}
+
+.modal-inner h3 {
+    margin: 10px 0; 
+}
+
+.support-details {
+    margin-top: 10px;
+}
+
+.support-details ul {
+    list-style-type: none; 
+    padding: 0; 
+}
+
+.support-details li {
+    margin-bottom: 15px; 
+    border-bottom: 1px solid #ccc; 
+    padding-bottom: 10px; 
+}
+button.obtn2 {
+    background-image: linear-gradient(to right, #0d0b56, #032bb0);
+    border-radius: 20px;
+    border: 0;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    color: white;
+    cursor: pointer;
+    padding: 10px 25px;
+    margin-left: 2%;
+    margin-top: 10%;
+    width:200px;
+    height: 50px;
+    font-size: 18px;    
+}
+button.obtn2:active {
+    opacity: 0.8;
+}
+
+/*Lecturer count css*/
+.lecture-count-box {
+    position: absolute; 
+    top: 320px; 
+    right: 170px; 
+    background-color: rgba(0, 0, 255, 0.2);
+    border: 2px solid blue;
+    padding: 20px; 
+    padding-right: 100px;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    font-size: 20px; 
+    color: black; 
+    font-weight: bold; 
+    z-index: 1000;
+}
+.teacher-trainee-count-box {
+    position: absolute; 
+    top: 450px; 
+    right: 97px; 
+    background-color: rgba(0, 0, 255, 0.2);
+    border: 2px solid blue;
+    padding: 20px; 
+    padding-right: 100px;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    font-size: 20px; 
+    color: black; 
+    font-weight: bold; 
+    z-index: 1000;
+}
+/*Footer*/
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #bcbcbc;
+    position: absolute;
+    bottom: -300px;
+    width: 97.5%;
+    height: 60px; 
+}
+
+.footerLogo {
+    width: 100px; 
+    height: 40px; 
+    margin: 0 auto;
+}
+/* For very small windows, make footer fixed */
+@media (max-height: 600px) { /* Adjust height as needed */
+    footer {
+        position: fixed;
+        bottom: 0;
+    }
+}
