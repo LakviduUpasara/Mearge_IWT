@@ -1,0 +1,88 @@
+/* Nadeeja - user table css */
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+table{
+    margin-top: 130px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-collapse: collapse;
+    width: 50%;
+    height: 200px;
+    border: 1px solid #bdc3c7;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+   
+}
+tr{
+    transition: all .2s ease-in;
+    cursor: pointer;
+}
+th{
+    position:sticky;
+    top:0;
+    background-color: #0d0b56;
+    color:white;
+    min-width:80px;
+    padding: 5px;
+    width: 80px;
+    min-height: 30px;
+    height: 20px;
+}
+.table-wrapper{
+    
+    height: calc(80vh - 450px);
+    overflow-y: scroll;
+    height: 200px;
+}
+
+th,td{
+    padding: 2px;
+    text-align:center;
+    border-bottom: 2px solid #ddd;
+    
+}
+
+tr:hover{
+    background-color: #f5f5f5;
+    transform: scale(1.01);
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+}
+.delete{
+    border-radius: 0px;
+    background-image: linear-gradient(to right, #5b040a, #a03743);
+    margin-left: 4px;
+    color: white;
+    text-decoration: none;
+    padding-left: 18px;
+    padding-right: 18px;
+   
+    
+}
+.delete:hover{
+    background-image: linear-gradient(to right, #a03743, #5b040a);
+    cursor: pointer;
+}
+/*For response massege*/
+#response{
+    margin: 90px;
+    margin-left: 1100px;
+    padding: 10px;
+    border-radius: 5px;
+    color: rgb(194, 0, 0);
+    width:15%;
+    margin-top: -590px;
+    text-align:center;
+}
+
+/*media query*/
+@media only screen and (max-width: 768px){
+    table{
+        width:90%;
+    }
+}

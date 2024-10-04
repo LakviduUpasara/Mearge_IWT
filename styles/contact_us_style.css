@@ -1,0 +1,185 @@
+
+/*imesha*/
+
+
+*{                          
+  font-family: sans-serif;
+}
+.content {
+  padding: 20px;
+}
+.left-column {
+  float: left;
+  width: 50%;
+  margin-top: 30px ;
+}
+i{
+  font-size:36px;
+}
+i:hover::before{
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ffee10;
+}
+i:hover{
+  color: #ffee10;
+  box-shadow: 0 0 5px #ffee10;
+}
+iframe {
+  width: 80%;
+  margin: auto;
+  height: 25vh;
+  overflow: hidden;
+  transform: translate(10%,-0% );
+  margin-left: 10px;
+}
+iframe:hover{
+  top: 10%;
+  bottom: 10%;
+  left: 10%;
+  right: 10%;
+  transform: translate(10%, 10%) scale(1.2); 
+  border: none;   
+}
+.right-column {
+  float: right;
+  width: 50%;
+  margin-top: 30px;
+  margin-bottom: 4px;
+}
+.contactUs-btn , .ticket-btn{
+  z-index: 1;
+  width: 200px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px 10px; 
+  border-radius: 25px;
+  font-weight: bold;
+  border: 2px solid #009688;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  
+}
+
+#frame{
+  background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(background3.jpg);
+  padding: 5px;
+  margin: 5px;
+  border-radius: 15px;
+  padding-bottom: 10px;
+}
+.contactUs-btn p{
+  text-align: center;
+  font-size: 14px;
+}
+span{
+  background: #271a9b;
+  height: 100%;
+  width: 0;
+  border-radius: 25px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+button:hover span{
+  width: 100%;
+}
+button:hover{
+  border: none;
+}
+
+#ticket-modal , #contact-model{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+#ticket-modal.show, #contact-modal.show {
+  display: block;
+}
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 768px) {
+  #ticket-modal #contact-model .modal-content {
+    width: 60%; /* Set the width to 80% on smaller screens */
+  }
+}
+.right-column p {
+  color:#f1f1f1;
+}
+form label{
+  color: #271a9b;
+}
+fieldset{
+ border: none;
+}
+input {
+  border-radius: 7px;
+  width: 100%;
+}
+#submit{
+  color: #f1f1f1;
+  border: #f1f1f1;
+  background-color: #007bff;
+  float:right ;
+  padding: 5px;
+  width: 80px;
+  cursor: pointer;
+  margin-left: 5px;
+  border-radius: 5px;
+} 
+ 
+#submit:hover{
+  cursor: pointer;
+  background-color: #fff;
+  border-style: solid;
+  color: #007bff;
+  border-color: #0d0b56;
+}
+textarea{
+  border-radius: 10px;
+  width: 100%;
+}
+.contact-info {
+  color: #f1f1f1;
+  padding: 9px;
+  margin-right: 20px ;
+}
+h1 {
+  margin: 0;
+  color: #dec213;
+  text-align: center;
+}
+.contact-info p {
+  margin: 0;
+}
+body{
+  background-image: url("../images/background3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content{
+  background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(background3.jpg);
+  background-size:auto;
+  background-position: center;
+}

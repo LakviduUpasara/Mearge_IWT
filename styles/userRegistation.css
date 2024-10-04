@@ -1,0 +1,82 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:rgb(239, 236, 236);
+  }
+  
+  .wrapper{
+    width: 400px;
+    height: 650px;
+    background: #fefefe;
+    border-radius: 15px;
+    box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+  }
+  
+  .wrapper .title{
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 100px;
+    color: #ffffff;
+    user-select: none;
+    border-radius: 15px 15px 0 0;
+    background: rgb(7, 7, 7);
+  }
+  
+  .wrapper form{
+    padding: 10px 30px 50px 30px;
+  }
+  
+  .wrapper form .field{
+    height: 50px;
+    width: 320px;
+    margin-top: 20px;
+    position: relative;
+  }
+  
+  .wrapper form .field input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 17px;
+    padding-left: 20px;
+    border: 1px solid rgb(149, 146, 146);
+    border-radius: 25px;
+  }
+  
+  .wrapper form .field label{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    color: #888585;
+    font-weight: 400;
+    font-size: 17px;
+    pointer-events: none;
+  }
+  
+  form .field input:focus ~ label,
+  form .field input:valid ~ label{
+    top: 0%;
+    font-size: 16px;
+    color: #3f3e3e;
+    background: #fdfdfd;
+    transform: translateY(-50%);
+  }
+  
+  form .btn input[type="submit"]{
+    color: #f4f4f4;
+    border: none;
+    width: 200px;
+    border-radius: 20px;
+    padding: 10px;
+    margin-left: 70px;
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    background: black;
+  }
