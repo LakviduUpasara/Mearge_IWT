@@ -15,17 +15,7 @@
      <div class="banner">
 
         <!--Navigation bar creating with logo--> 
-        <div class="navbar">
-            <img src="images/logo1.png" alt="logo"class="logo">
-            <ul>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Course</a></li>
-                <li><a href="#">Support</a></li>
-                <li><a href="#">Feedback</a></li>
-                <li><a href="./logout.php">Sign Out</a></li>
-                <li><a href="#">Teach with us</a></li>
-            </ul>
-        </div>
+          <?php include "./Teacher_navbar.php";?>
 
         <div class="main-content">
             <h1>Feedback</h1>

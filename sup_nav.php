@@ -1,4 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" type= "text/css" href="styles/sup_nav.css">
+</head>
+<body>
 
+        
 <div class="sup_header">
     <img src="images/logo.png" alt="logo"class="logo">
         
@@ -15,3 +25,6 @@
 
     <a href=home.php><img src="images/arrow1.png" alt="arrow1"class="arrow"></a>
 </div>
+    
+</body>
+</html>

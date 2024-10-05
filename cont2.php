@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt1->bind_param('issss', $Ticket_id, $Subject, $Email, $Message, $reply);
 
         if ($stmt1->execute()) {
-            echo "Data inserted successfully";
+            echo " <script> alert ('Data inserted successfully');";
         } else {
             echo "Insertion failed: " . $conn->error;
         }

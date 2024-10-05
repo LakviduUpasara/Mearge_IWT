@@ -17,20 +17,21 @@
                         <li><a href="./LectureDashbord.php">Dashboard</a></li>
                         <li><a href="./lecture_course_dashbord.php">Courses</a></li>
                         <li><a href="#">Support</a></li>
-                        <li><a href="#">Feedback</a></li>
+                        <li><a href="feedback.php">Feedback</a></li>
                 
                     </ul>
 
                 <div class = "logout-side">
 
                     <div class="profile">
-                        <a href="userprofilemanagement.php">
+                        <a href="userprofile.php">
                             <img src="./images/user-icon.png" alt="User Profile">
                         </a>
                     </div>
                     <div>
                      <a href="logout.php" class="logout-label">Logout</a>
                     </div>
+                  
                 </div>
         </div>
 

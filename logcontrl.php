@@ -38,19 +38,21 @@
                         // if passored correct
 
                         if (isset( $_POST['remember'])) {
-                            $hashed_password = password_hash($user['Password'], PASSWORD_DEFAULT);
-                            setcookie('user_id', $user['User_id '], time() + (86400 * 30), "/");
-                            setcookie('password', $hashed_password, time() + (86400 * 30), "/"); // 1 month
+                            setcookie('password', $user['Password'], time() + (86400 * 30), "/"); // 1 month
                             setcookie('email', $user['Email '], time() + (86400 * 30), "/"); // 1 month
                             // 1 month
                         } else {
-                            $_SESSION['user_id'] = $user['id'];
+                            $_SESSION['user_id'] = $user['User_id'];
                             $_SESSION['password'] = $user['Password'];
                             $_SESSION['email']  = $user['Email'];
 
                         }
 
                         $user_role = $user['User_role'];
+                        $_SESSION['User Role']  = $user_role;
+                        $_SESSION ['User_id'] = $user['User_id'];
+                        $_SESSION ['First_Name	'] = $user['User_name'];
+
                         echo  $user_role;
                         
                         // Redirect based on user role
@@ -67,7 +69,7 @@
                                 header("Location: adminsupport.php");
                                 exit();
                                 
-                            case 'user':
+                            case 'teacher':
                                 header("Location: teacherdashboard.php");
                                 exit();
                             
@@ -81,8 +83,9 @@
                     } else 
                     {
                         // if passored or email incorrct error massage 
+                        header("Location: ./index");
                         $_SESSION ['error'] = "Invalid Email  or Password"; 
-                        header("Location: home.php?");
+                       
 
                         exit();
                     }
@@ -90,8 +93,6 @@
 
         }
 
-        $get_deatail->close();
-        $con->close();
             
         
 ?>
