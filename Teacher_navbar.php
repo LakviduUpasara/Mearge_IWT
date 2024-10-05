@@ -13,11 +13,11 @@
                     <img src="images/logo.png" alt="logo" class="logo">
                 </div>
                     <ul>
-                        <li><a href="./LectureDashbord.php">Dashboard</a></li>
-                        <li><a href="./lecture_course_dashbord.php">Courses</a></li>
+                        <li><a href="./teacherdashboard.php">Dashboard</a></li>
+                        <li><a href="./teachercourseviev.php">Courses</a></li>
                         <li><a href="#">Support</a></li>
                         <li><a href="#">Feedback</a></li>
-                        <li><a href="#">Teach with us</a></li>
+                        <li><a href="lectureRegister.php">Teach with us</a></li>
 
                 
                     </ul>

@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lecturer Dashboard</title>
     <link rel="stylesheet" href="styles/lecserdashtempt.css">
+    <link rel="stylesheet" href="styles/lecture_course_dashbord.css">
+
   
 
     
@@ -43,6 +45,17 @@
                     Loadannousment() ;
 
 
+            ?>
+        </div>
+    </div>
+
+    <div class="courses-section">
+     <h1>Course Details</h1>
+    
+        <div class="courses">
+            <?php
+                    require './courseMangmentcontrol.php';
+                    LoadcourseDetail();
             ?>
         </div>
     </div>
