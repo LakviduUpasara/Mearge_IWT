@@ -1,19 +1,81 @@
-<!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+<<<<<<< Updated upstream
     <link href="styles/aboutus_sylesheet.css" rel="stylesheet"/>
+=======
+
+   
+  
+    <link rel ="stylesheet" href ="styles/signpopup.css" >
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="/styles/aboutus_sylesheet.css" rel="stylesheet"/>
+
+>>>>>>> Stashed changes
     
 </head>
 <body>
 
+<<<<<<< Updated upstream
         <?php
 
             include 'navbar.php';
       
       ?>
     <!--vision mission-->
+=======
+        <?php 
+
+            include 'navbar.php';
+
+        ?>
+
+
+<div class= "popup">
+
+<div class ="close-btn" id ="close-btn" onclick="closeModal()">&times;</div>
+
+    <div class="from-login">
+
+        <form action="logcontrl.php" method="post" id="loginForm">
+                <h2 id="sign-heading2">Sign In</h2>
+
+            <div class="form-elements">
+                <p id="message"><?php echo isset($_GET['error']) ? $_GET['error'] : ''; ?></p>
+
+                <label for="Email">Email</label>
+                <input type="text" id="Email" name="Email" placeholder="Enter Email Address" required>
+            </div>
+
+            <div class="form-elements">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter Password" required>
+            </div>
+
+            <div class="form-elements">
+                <input type="checkbox" id="remember-me" name="remember">
+                <label for="remember-me">Remember Me</label>
+            </div>
+
+            <div class="form-elements">
+                <button type="submit" name="submit" value="Login-now">Sign In</button>
+            </div>
+
+            <div class="form-elements">
+                <a href="forgetpassword.php">Forget password</a>
+     
+            </div>
+    </div>
+        </form>
+
+
+</div>
+
+<script src ="js/signpopup.js"></script>
+
+       
+     <!--vision mission-->
+>>>>>>> Stashed changes
     <div class="full">
     <div class="container">
         <div class="about_us">
@@ -43,7 +105,7 @@
             </div>
         </div>
     </div>
-
+    
     <!--Our team-->
     <div class="title">
         <h1>Meet Our Team</h1>
@@ -102,9 +164,15 @@
                 </div>
             </div> 
         </div> 
+<!--footer  connection-->
 
-        
+<?php
 
+        include 'footer.php' ;
+
+?>
+
+<<<<<<< Updated upstream
     </div>
     </div>
 </div>
@@ -115,5 +183,7 @@
         ?>
     
 </div>
+=======
+>>>>>>> Stashed changes
 </body>
 </html>
