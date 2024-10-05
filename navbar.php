@@ -20,8 +20,8 @@
         <li><a href="index.php">Home</a></li>
         <li><a href="aboutUs.php">About</a></li>
         <li><a href="contactUs.php">Contact Us</a></li>
-        <li><a href="#" id="nav-signbtn" onclick="openModal()">Sign In</a></li>
-        <li><a href="#">Join Now</a></li>
+        <li><a href="Login.php" id="nav-signbtn" onclick="openModal()">Sign In</a></li>
+        <li><a href="userRegistation.php">Join Now</a></li>
     </ul>
     
 </div>

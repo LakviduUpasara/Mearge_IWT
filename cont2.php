@@ -1,7 +1,8 @@
 <?php
 //imesha
 
-require 'config5.php';
+require 'config2.php';
+
 // Database connection
 $conn = $con;
 

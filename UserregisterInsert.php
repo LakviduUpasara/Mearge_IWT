@@ -1,6 +1,7 @@
 <?php
 
-    require 'config.php';
+    require 'config2.php';
+
 
     // $userId = $_POST["sid"];
      $userFname = $_POST["sfirstname"];

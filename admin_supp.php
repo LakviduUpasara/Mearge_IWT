@@ -1,7 +1,7 @@
 <?php
 //imesha
 
-require 'config5.php';
+require 'config2.php';
 
 //id generation
 $sql = "SELECT S_ticket_id FROM admin_support  ORDER BY S_ticket_id DESC LIMIT 1"; 

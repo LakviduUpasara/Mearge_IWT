@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#message{
+
+    text-align: center;
+    color: red;
+
+}
+
+.form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+#sign-heading2 {
+    text-align: center;
+    color: #222;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.form-elements {
+    margin-bottom: 15px;
+}
+
+.form-elements label {
+    display: block;
+    font-size: 14px;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.form-elements input[type="text"],
+.form-elements input[type="password"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    outline: none;
+}
+
+.form-elements input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.form-elements button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    background-color: #222;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-elements a {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #1a79ca;
+    text-decoration: none;
+    margin-top: 10px;
+}
+.footer-desing
+{
+    display: contents;
+    padding: auto;
+    margin-bottom: auto;
+
+}

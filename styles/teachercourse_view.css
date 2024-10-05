@@ -1,0 +1,13 @@
+.courses-section{
+
+    text-align: center;
+    padding: 10px;
+    margin: center;
+    color: #122553;
+}
+#course_image{
+    padding: 2px;
+    margin: 2px;
+    background-color: rgb(151, 38, 38);
+    width: 300px;
+}

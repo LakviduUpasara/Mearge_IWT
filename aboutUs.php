@@ -3,10 +3,16 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="aboutus_sylesheet.css" rel="stylesheet"/>
+    <link href="styles/aboutus_sylesheet.css" rel="stylesheet"/>
     
 </head>
 <body>
+
+        <?php
+
+            include 'navbar.php';
+      
+      ?>
     <!--vision mission-->
     <div class="full">
     <div class="container">
@@ -101,6 +107,13 @@
 
     </div>
     </div>
+</div>
+<div class ="footer">
+
+        <?php
+        include "footer.php";
+        ?>
+    
 </div>
 </body>
 </html>

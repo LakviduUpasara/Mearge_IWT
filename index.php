@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TeachWave</title>
     <link rel= "stylesheet" href="./styles/index.css">
-    <link rel ="stylesheet" href ="styles\signpopup.css" >
-    <link rel ="stylesheet" href ="styles\feedbackSlider.css" >
+    <link rel ="stylesheet" href ="styles/signpopup.css" >
+    <link rel ="stylesheet" href ="styles/feedbackSlider.css" >
 </head>
 <body>
 
@@ -16,9 +16,61 @@
         <!--Navigation bar creating with logo--> 
 
         <?php
-        include "header_nav.php";
+        include "./navbar.php";
         ?>
-        
+ <div class= "popup">
+
+<div class ="close-btn" id ="close-btn" onclick="closeModal()">&times;</div>
+
+    <div class="from-login">
+
+        <form action="logcontrl.php" method="post" id="loginForm">
+                <h2 id="sign-heading2">Sign In</h2>
+
+            <div class="form-elements">
+                <?php 
+                    if(isset($_SESSION['error']))
+                    {
+                        echo "<p id='message'>".$_SESSION['error']."</p>" ;
+                        echo" <script>alert('Email or Password is incorrect ') ;</script>" ;
+
+                    } 
+                    unset($_SESSION['error']);
+                
+                ?>
+
+                <label for="Email">Email</label>
+                <input type="text" id="Email" name="Email" placeholder="Enter Email Address" required>
+            </div>
+
+            <div class="form-elements">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter Password" required>
+            </div>
+
+            <div class="form-elements">
+                <input type="checkbox" id="remember-me" name="remember">
+                <label for="remember-me">Remember Me</label>
+            </div>
+
+            <div class="form-elements">
+                <button type="submit" name="submit" value="Login-now">Sign In</button>
+            </div>
+
+            <div class="form-elements">
+                <a href="forgetpassword.php">Forget password</a>
+     
+            </div>
+    </div>
+        </form>
+
+
+</div>
+
+<script src ="js/signpopup.js"></script>
+
+
+
         <!--Feedbacks-->
         <div class="feedback-tricker">
             <div class="label">Feedback</div>
@@ -46,50 +98,17 @@
             <!--sign in and join now buttons-->
          
             <div>
-                <button class ="home-btn" type="button" id = "body-signinbtn"><span></span>Sign In</button>
+                <button class ="home-btn" type="button" id = "body-signinbtn" onclick="openModal()"><span></span>Sign In</button>
                 <button class ="home-btn" type="button"><span></span>Join Now</button>
 
             </div>
         </div>
+
+       
      </div>
 
-     <div class= "popup">
-
-        <div class ="close-btn">&times;</div>
-        <div class="from-login">
-
-            <form action=""id="loginForm">
-                <h2 id ="sign-heding2"> Sign In</h2>
-
-                <div class = "form-elements">
-
-                <label for="Email">Email</label>
-                <input type="text"id ="Email" name=" Email" placeholder ="Enter Email Address " >
-                </div>
-                <div class="form-elements">
-                    <label for="password">Password</label>
-                    <input type="password" id ="password" name = "password"placeholder ="Enter Password " required>
-                </div>
-
-                <div class="form-elements">
-                    <input type="checkbox" id = "remember-me">
-                    <label for="remember-me">Remember Me </label>
-                </div>
-
-                <div class="form-elements">
-                    <button type="submit" name="submit" value="Login-now" >Sign In</button>
-                </div>
-
-                <div class="form-elements">
-                    <a href="#">Forget password</a>
-                </div>
-            </form>
-
-        </div>
-
-        <script src ="js\signpopup.js"></script>
-
-     </div>
+    
+      
      <?php
         include "footer.php";
         ?>

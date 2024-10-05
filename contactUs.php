@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Contact US</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel ="stylesheet" type="text/css" href="./styles/contact_us_style.css">
@@ -100,21 +101,14 @@
 </head>
 <body>
 
+    <?php
+
+    include 'navbar.php';
+    ?>
+
   <div class="container">
 
     <div class="banner">
-
-      <!--Navigation bar creating with logo--> 
-      <div class="navbar">
-          <img src="images/logo.png" alt="logo"class="logo">
-          <ul>
-                <li><a href="home.php">Home</a></li>
-                <li><a href="About us.php">About</a></li>
-                <li><a href="contact_us.html">Contact Us</a></li>
-                <li><a href="#" id ="nav-signbtn">Sign In</a></li>
-                <li><a href="#">Join Now</a></li>
-          </ul>
-      </div>
 
       <div class="content">
 
@@ -224,44 +218,16 @@
       <br>
   </div>
 
-<!--Footer -->
-<footer>
 
-  <div class="footer-col">
+    <div class="footer">
 
-    <h4>Quick Links</h4>
+    <?php
+        include "footer.php";
+     ?>
 
-      <ul>
-        <li><a href="home.php">-Home</a></li>
-        <li><a href="About_us.php">-About Us</a></li>
-        <li><a href="#">-Contact Us</a></li>
-        <li><a href="#">-Privacy And Policy</a></li>
-      </ul>
-
-  </div>
-
-  <div class="footer-col">
-
-    <h4>Contact Us</h4>
-
-      <p><img src="images/gps.png" alt="gps" class="contact-img"> 160/A, Ekambara state, Gaspe.</p>
-      <p><img src="images/phone.png" alt="gps" class="contact-img"> +94 765826516</p>
-      <p><img src="images/email.png" alt="gps" class="contact-img"> info@TechWave.com</p>
- 
-    <h4>Follow Us</h4>
-
-      <div class="links">
-
-        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-        <a href="#"><i class="fa-brands fa-youtube"></i></a>
-      
-      </div>
-
-  </div>
-
-</footer>
+    </div>
+       
+    
  
 </body>
 </html>
