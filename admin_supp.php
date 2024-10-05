@@ -1,6 +1,8 @@
 <?php
 //imesha
 
+session_start();
+
 require 'config2.php';
 
 //id generation
@@ -32,6 +34,7 @@ $query1 = "INSERT INTO admin_support VALUES ('$S_ticket_id','$User_Ticket_id', '
 
 if($con->query($query1))//hj 
 {
+    
     echo "success";
 }
 else{

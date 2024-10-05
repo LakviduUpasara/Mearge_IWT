@@ -16,7 +16,7 @@
                     <ul>
                         <li><a href="./LectureDashbord.php">Dashboard</a></li>
                         <li><a href="./lecture_course_dashbord.php">Courses</a></li>
-                        <li><a href="#">Support</a></li>
+                        <li><a href="Support_member.php">Support</a></li>
                         <li><a href="feedback.php">Feedback</a></li>
                 
                     </ul>

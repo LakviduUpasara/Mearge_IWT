@@ -15,9 +15,11 @@ $sqluser = "INSERT INTO user_detail (First_Name, Last_Name, Phone, Email, Passwo
 
 if ($con->query($sqluser)) {
     echo "<script>alert('Your registration was successfully completed');</script>";
-    header("Location: home.php");
+    header("Location: index.php");
 } else {
-    echo "Not Added: " . $con->error;
+    echo "<script>alert('Registration failed');</script>";
+    header("Location: index.php");
+    
 }
 
 $con->close();

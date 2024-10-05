@@ -75,7 +75,7 @@
                             
                             default:
                                 // If role is unknown, show error
-                                header("Location: home.php?error=Unknown role");
+                                header("Location: index.php?error=Unknown role");
                                 exit();
                             
                                 
@@ -83,7 +83,7 @@
                     } else 
                     {
                         // if passored or email incorrct error massage 
-                        header("Location: ./index");
+                        header("Location: ./index.php");
                         $_SESSION ['error'] = "Invalid Email  or Password"; 
                        
 

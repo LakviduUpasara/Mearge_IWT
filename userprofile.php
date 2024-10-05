@@ -20,6 +20,13 @@
     <!--<link rel ="stylesheet" href ="table.css">-->
 </head>
 <body>      
+
+        <?php
+
+            include    'Hederfootor.php';
+            ManagemntNavbr() ;
+            
+        ?>
      
         <div class="table-wrapper">
            
@@ -132,6 +139,12 @@ function closePopup1(){
 
 </script>
 
+        <?php
+
+        include    'Hederfootor.php';
+        ManagemntNavbr() ;
+        Managemntfooter()
+        ?>
 
 </body>
 </html>

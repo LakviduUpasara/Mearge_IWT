@@ -1,0 +1,118 @@
+/* Resetting default margin, padding, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling the body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Wrapper for centering the form */
+.wrapper {
+    width: 400px;
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styling */
+.title {
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* General input field styles */
+.field {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.field input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Floating label styling */
+.field label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    color: #aaa;
+    font-size: 16px;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+/* Move label up when input is focused or filled */
+.field input:focus + label,
+.field input:not(:placeholder-shown) + label {
+    top: 0;
+    font-size: 12px;
+    color: #0d0b56;
+    background-color: #fff;
+    padding: 0 5px;
+}
+
+/* Focus border color */
+.field input:focus {
+    border-color: #0d0b56;
+}
+
+/* Button styling */
+.btn {
+    text-align: center;
+}
+
+.btn input {
+    width: 100%;
+    padding: 12px;
+    background-color: #0d0b56;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn input:hover {
+    background-color: #141267;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 480px) {
+    .wrapper {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .field input {
+        font-size: 14px;
+    }
+
+    .btn input {
+        padding: 10px;
+    }
+}

@@ -1,8 +1,10 @@
-<?php    
+<?php   
+
+    session_start();
     function    ManagemntNavbr()
     {
-
         $user_role = $_SESSION['User_Role'] ;
+
         // Redirect based on user role
         switch ($user_role) {
             case 'admin':
@@ -32,8 +34,7 @@
                 include 'sup_nav.php' ;
             case 'teacher':
                 include 'footer.php' ;
-            default:
-           
+            default:   
         }
     }
 

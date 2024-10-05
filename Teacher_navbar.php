@@ -18,7 +18,7 @@
                     <ul>
                         <li><a href="./teacherdashboard.php">Dashboard</a></li>
                         <li><a href="./teachercourseviev.php">Courses</a></li>
-                        <li><a href="./admin_support.php">Support</a></li>
+                        <li><a href="./Support_member.php">Support</a></li>
                         <li><a href="feedback.php">Feedback</a></li>
                         <li><a href="#"onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Teach with us</a></li>
 
