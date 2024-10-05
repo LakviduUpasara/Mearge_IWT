@@ -9,26 +9,13 @@
 </head>
 <body>
 
-<<<<<<< Updated upstream
-    <?php
-
-    include 'navbar.php';
-    ?>
-
-  <div class="container">
-=======
->>>>>>> Stashed changes
 
 <!-- Navgtion bar set -->
 
-<<<<<<< Updated upstream
-      <div class="content">
-=======
 
   <?php 
->>>>>>> Stashed changes
 
-  include'navbar.php';
+   include 'navbar.php';
 
   ?>
 

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard </title>
     <link rel="stylesheet" href="styles/lecture_course_dashbord.css">
+    
 
 </head>
 <body>
@@ -21,7 +22,22 @@
                     LoadcourseDetail();
             ?>
         </div>
+    </div>
+
+    <div class="announcement">
+        <h1 class="announcement-heading">Announcements</h1>
+        <div class="announcement-content">
+            <?php
+
+                    require './view_lecAnnouncement_Detail.php' ;
+
+                    Loadannousment() ;
+
+
+            ?>
         </div>
+
+
 
     
 
