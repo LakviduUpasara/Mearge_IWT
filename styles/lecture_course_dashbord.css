@@ -34,7 +34,7 @@ body {
     width: 100%; /* Full width of the container */
     height: 100%; /* Full height of the container */
     background-color: rgba(0, 0, 0, 0.5); /* Transparent dark background */
-    color: white; /* White text for contrast */
+    color: rgb(108, 99, 155); /* White text for contrast */
     display: flex;
     flex-direction: column;
     justify-content: center; /* Center the content vertically */
@@ -49,7 +49,7 @@ body {
 }
 
 .course-box {
-    background-color: #bababa;
+    background-color: #504f86;
     padding: 20px; 
     text-align: left;
     border-radius: 10px;
@@ -58,12 +58,17 @@ body {
     margin: 25px 30px 25px 25px ;
     position: relative; 
     display: inline-block;
+    color: white;
 }
 
 
 .course-box img {
     width: 120px;
     border-radius: 5px;
+}
+.course-box a {
+    color: white;
+    text-decoration: none;
 }
 
 .course-box h2 {
