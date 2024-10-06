@@ -41,9 +41,10 @@
         <!--Some detail about aboutus-->
         <div class="about-us">
             <h1>About Us</h1>
-            <p>Welcome to TeachWave 
-            <br>online teacher training platform</p>
-
+            <p>-Vision-
+            <br>To become the leading platform for professional development, equipping teachers with innovative tools and skills to inspire the next generation of learners.</p>
+            <p>-Mission-
+            <br>To offer dynamic, research-backed learning experiences that promote modern pedagogical approaches and support teachers in adapting to the ever-changing educational landscape.</p>
             <!--sign in and join now buttons-->
          
             <div>
