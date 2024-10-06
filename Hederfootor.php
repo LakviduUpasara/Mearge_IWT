@@ -1,9 +1,8 @@
 <?php   
 
-    session_start();
     function    ManagemntNavbr()
     {
-        $user_role = $_SESSION['User_Role'] ;
+        $user_role =$_SESSION['User_Role'] ;
 
         // Redirect based on user role
         switch ($user_role) {
