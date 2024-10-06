@@ -19,7 +19,7 @@
             <li><a href="home.php">-Home</a></li>
             <li><a href="About us.php">-About Us</a></li>
             <li><a href="#">-Conatct Us</a></li>
-            <li><a href="#">-Privacy And Policy</a></li>
+            <li><a href="PrivacyPolicyContent.php">-Privacy And Policy</a></li>
             </ul>
         </div>
         <div class="footer-col">
