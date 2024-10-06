@@ -45,7 +45,7 @@
 
           <?php
 
-            require 'config5.php';
+            require './config2.php';
 
             $sqlAnnou    = "SELECT Topic, Description FROM announcement_detail";
 
@@ -92,7 +92,8 @@
           
             <?php
 
-              require 'config5.php';
+              require './config2.php';
+
 
               $sqlTicket   = "SELECT Ticket_id, Email, Subject, Message FROM tickets";
 

@@ -12,21 +12,9 @@
     
 </head>  
 <body>
-
-<div class="sup_header">
-  <a href="./userprofile.php"><img src="images/logo.png" alt="logo"class="logo"></a>
-  
-  <div class="sup_navbar">
-  <ul>
-     <li><a class="nav" href="#">Announcements</a></li>
-     <li><a class="nav" href="supportDashboard.php">Ticket Review</a></li>
-     <li><a class="nav" href="admin_support.php">Admin Support</a></li>
-     <li><a class="nav" href="./userprofile.php">User Profile</a></li>
-  </div>
-  <br><br>
-  <a href=home.php><img src="images/arrow1.png" alt="arrow1"class="arrow"></a>
-</div>
-
+  <?php
+      include './sup_nav.php';
+  ?>
 
 <main >
 
