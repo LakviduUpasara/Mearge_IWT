@@ -24,7 +24,7 @@
         <?php
 
             include    'Hederfootor.php';
-            ManagemntNavbr() ;  
+             ManagemntNavbr() ;  
             
         ?>
      

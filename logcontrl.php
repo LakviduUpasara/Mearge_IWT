@@ -39,7 +39,9 @@
 
                         if (isset( $_POST['remember'])) {
                             setcookie('password', $user['Password'], time() + (86400 * 30), "/"); // 1 month
-                            setcookie('email', $user['Email '], time() + (86400 * 30), "/"); // 1 month
+                            setcookie('email', $user['Email '], time() + (86400 * 30), "/");
+                            
+                             // 1 month
                             // 1 month
                         } else {
                             $_SESSION['user_id'] = $user['User_id'];
@@ -49,7 +51,7 @@
                         }
 
                         $user_role = $user['User_role'];
-                        $_SESSION['User_Role']  = $user_role;
+                        $_SESSION['User_role']  = $user_role;
                         $_SESSION ['User_id'] = $user['User_id'];
                         $_SESSION ['First_Name	'] = $user['User_name'];
 
