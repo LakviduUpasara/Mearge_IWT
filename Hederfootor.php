@@ -1,5 +1,6 @@
 <?php   
 
+    session_start() ;
     function    ManagemntNavbr()
     {
         $user_role = $_SESSION['User_role'];
@@ -18,6 +19,7 @@
                 include 'Teacher_navbar.php' ;
                 break;
             default:
+            break;
            
         }
     }
@@ -39,5 +41,8 @@
             default:   
         }
     }
+
+  
+
 
 ?>
