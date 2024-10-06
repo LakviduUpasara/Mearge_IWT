@@ -15,7 +15,12 @@
      <div class="banner">
 
         <!--Navigation bar creating with logo--> 
-          <?php include "./Teacher_navbar.php";?>
+                    <?php
+
+                 include    'Hederfootor.php';
+                ManagemntNavbr() ;  
+
+            ?>
 
         <div class="main-content">
             <h1>Feedback</h1>

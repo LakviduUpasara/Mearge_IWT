@@ -19,7 +19,6 @@
         include "navbar.php";
         ?>
         
-        
         <!--Feedbacks-->
         <div class="feedback-tricker">
             <div class="label">Feedback</div>
@@ -41,21 +40,54 @@
         <!--Some detail about aboutus-->
         <div class="about-us">
             <h1>About Us</h1>
-            <p>-Vision-
-            <br>To become the leading platform for professional development, equipping teachers with innovative tools and skills to inspire the next generation of learners.</p>
-            <p>-Mission-
-            <br>To offer dynamic, research-backed learning experiences that promote modern pedagogical approaches and support teachers in adapting to the ever-changing educational landscape.</p>
+            <p>Welcome to TeachWave 
+            <br>online teacher training platform</p>
+
             <!--sign in and join now buttons-->
          
             <div>
-                <button class ="home-btn" type="button" id = "body-signinbtn" onclick = "openModal();"><Sign In</button>
+                <button class ="home-btn" type="button" id = "body-signinbtn" onclick=" openModal();"><span></span>Sign In</button>
                 <button class ="home-btn" type="button"><span></span>Join Now</button>
 
             </div>
         </div>
      </div>
 
+     <div class= "popup">
 
+        <div class ="close-btn">&times;</div>
+        <div class="from-login">
+
+            <form action=""id="loginForm">
+                <h2 id ="sign-heding2"> Sign In</h2>
+
+                <div class = "form-elements">
+
+                <label for="Email">Email</label>
+                <input type="text"id ="Email" name=" Email" placeholder ="Enter Email Address " >
+                </div>
+                <div class="form-elements">
+                    <label for="password">Password</label>
+                    <input type="password" id ="password" name = "password"placeholder ="Enter Password " required>
+                </div>
+
+                <div class="form-elements">
+                    <input type="checkbox" id = "remember-me">
+                    <label for="remember-me">Remember Me </label>
+                </div>
+
+                <div class="form-elements">
+                    <button type="submit" name="submit" value="Login-now" >Sign In</button>
+                </div>
+
+                <div class="form-elements">
+                    <a href="#">Forget password</a>
+                </div>
+            </form>
+
+        </div>
+
+        <script src ="js\signpopup.js"></script>
 
      </div>
      <?php
