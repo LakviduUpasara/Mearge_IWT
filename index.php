@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TeachWave</title>
     <link rel= "stylesheet" href="./styles/index.css">
-    <link rel ="stylesheet" href ="styles\signpopup.css" >
-    <link rel ="stylesheet" href ="styles\feedbackSlider.css" >
+    <link rel ="stylesheet" href ="styles/signpopup.css" >
+    <link rel ="stylesheet" href ="styles/feedbackSlider.css" >
 </head>
 <body>
 
