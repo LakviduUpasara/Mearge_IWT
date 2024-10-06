@@ -62,7 +62,7 @@
 
             $result = mysqli_query($con, "SELECT User_id, First_Name, Last_Name, Phone, Email, Password, User_role
                                 FROM user_detail
-                                WHERE User_role LIKE 'Teacher-trainee'");
+                                WHERE User_role LIKE 'teacher'");
             while($row = mysqli_fetch_assoc($result))
                 {
                     ?>
@@ -116,10 +116,10 @@
                             <label for="ur">User Role</label>
                             <div class="select-container">
                                 <select class="select-box" name="suserRole" id="userRole">
-                                    <option value="Lecture">Lecture</option>
-                                    <option value="Teacher-trainee">Teacher-trainee</option>
-                                    <option value="Admin">Admin</option>
-                                    <option value="Support-member">Support-member</option>
+                                    <option value="lecture">lecture</option>
+                                    <option value="teacher">teacher</option>
+                                    <option value="admin">admin</option>
+                                    <option value="supportmember">supportmember</option>
                                 </select>
                             </div>
                         </div>
