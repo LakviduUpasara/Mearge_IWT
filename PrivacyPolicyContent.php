@@ -55,6 +55,9 @@ session_start();
     </style>
 </head>
 <body>
+        <?php
+        include "navbar.php";
+        ?>
     <div class="container">
         <h1>Privacy Policy</h1>
 
@@ -103,5 +106,6 @@ session_start();
             &copy; <?php echo date('Y'); ?> TechWave Online Teacher Training. All rights reserved.
         </footer>
     </div>
+    
 </body>
 </html>
