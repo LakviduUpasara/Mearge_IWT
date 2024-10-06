@@ -14,7 +14,7 @@ function confirmLogout() {
     const message = "Are you sure you want to log out?";
     
     if (confirm(message)) {
-        window.location.href = "index.php";
+        window.location.href = "logout.php";
     } else {
         alert("Logout canceled.");   
     }
