@@ -1,9 +1,4 @@
 
-<?php 
-
-        session_start();
-
-?>
 <!--table of user profiles-->
 <!DOCTYPE html>
 <html lang="en">
