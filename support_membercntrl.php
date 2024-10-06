@@ -1,36 +1,59 @@
 <?php
-//imesha
+
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
+require 'config2.php'; 
+$ticked_id = null;
 
-require 'config2.php';
+function creatticketid($con) {
+    $sql = "SELECT Ticket_id FROM tickets ORDER BY Ticket_id DESC LIMIT 1"; 
+    $result = $con->query($sql);
 
-if ($_SERVER($_POST[ "REQUEST _METHOD" ] == "POST") )
-{
-
-    if (isset($_POST['submit'])) {
-        // Retrieve form data
-        $subject =$_POST['Subject'];
-        $email = $_POST['email'];
-        $message =$_POST['message'];
-    
-        // Insert data into the tickets table
-        $sql = "INSERT INTO tickets (Subject, Email, Message) VALUES ('?', '?', '?')";
-    
-        if ($conn->query($sql) === TRUE) {
-            echo "New ticket created successfully!";
-        } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
-        }
+    if ($result && $result->num_rows > 0) {   
+        $row = $result->fetch_assoc();
+        return $row['Ticket_id'] + 1;
+    } else {
+        return 1; 
     }
-    
-    // Close the connection
-    $conn->close();
-
-
 }
 
-?>
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {   
+    
+    $subject = $_POST['Subject'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+    $reply = "Null";
 
+    if (isset($_POST['submit'])) {
+        
+        $ticked_id = creatticketid($con);
+
+        
+        $sql = "INSERT INTO Tickets (Ticket_id, Subject, Email, Message, Reply) 
+                VALUES (?, ?, ?, ?, ?)";
+
+        
+        if ($stmt = $con->prepare($sql)) {
+           
+            $stmt->bind_param("issss", $ticked_id, $subject, $email, $message, $reply);
+
+         
+            if ($stmt->execute()) {
+                echo "New ticket created successfully!";
+            } else {
+                echo "Error: " . $stmt->error;
+            }
+
+         
+            $stmt->close();
+        } else {
+            echo "Error preparing statement: " . $con->error;
+        }
+    }
+}
+
+
+$con->close();
+?>

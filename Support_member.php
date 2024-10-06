@@ -55,7 +55,7 @@
         <fieldset>
             <h2 id="subheading">Support</h2>
             <div class="error"></div>
-            <form  action="Support_member.php" method="POST">
+            <form  action="support_membercntrl.php" method="POST">
                 <label for="Subject">Subject:</label>
                 <input type="text" id="Subject" name="Subject" class="form-input" required><br>
 
