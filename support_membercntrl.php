@@ -12,12 +12,12 @@ if ($_SERVER($_POST[ "REQUEST _METHOD" ] == "POST") )
 
     if (isset($_POST['submit'])) {
         // Retrieve form data
-        $subject = mysqli_real_escape_string($conn, $_POST['Subject']);
-        $email = mysqli_real_escape_string($conn, $_POST['email']);
-        $message = mysqli_real_escape_string($conn, $_POST['message']);
+        $subject =$_POST['Subject'];
+        $email = $_POST['email'];
+        $message =$_POST['message'];
     
         // Insert data into the tickets table
-        $sql = "INSERT INTO tickets (Subject, Email, Message) VALUES ('$subject', '$email', '$message')";
+        $sql = "INSERT INTO tickets (Subject, Email, Message) VALUES ('?', '?', '?')";
     
         if ($conn->query($sql) === TRUE) {
             echo "New ticket created successfully!";

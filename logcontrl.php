@@ -71,7 +71,7 @@
                                 exit();
                                 
                             case 'supportmember':
-                                header("Location: adminsupport.php");
+                                header("Location:supportDashboard.php");
                                 exit();
                                 
                             case 'teacher':
