@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support Member</title>
     <link rel="stylesheet" href="styles/support_member.css">
+    <link rel="stylesheet"  href="styles/UserProfile.css">
+
 </head>
 
 <body>
@@ -15,18 +17,47 @@
     ManagemntNavbr();
     ?>
 
+<div class="table-wrapper">
+           
+           <table border="1px">
+                   <tr id="header">
+                       <th>Subject</th>
+                       <th>Message</th>
+                       <th>Reply</th>
+                    </tr> 
+                   
+               <?php
+               require './config2.php';
+               $email = $_SESSION['email'];   
+
+               $sql = "SELECT Subject ,Message,Reply FROM  tickets  WHERE Email  = '$email' ORDER BY Ticket_id  DESC";
+               $stmt = $con->prepare($sql);
+               $stmt->execute();
+               $ticket_detail = $stmt->get_result();
+              while( $row =  $ticket_detail->fetch_assoc())
+              { 
+                ?>     
+                <tr>
+                <td><?php echo $row["Subject"]; ?></td>
+                <td><?php echo $row["Message"]; ?></td>
+                <td><?php echo $row["Reply"]; ?></td>
+                </tr>
+
+               <?php 
+              }
+              ?>
+              
+               </table>
+               </div>
     <main>
         <script src="./js/adminSupport.js"></script>
 
         <fieldset>
             <h2 id="subheading">Support</h2>
             <div class="error"></div>
-            <form onsubmit="return validate()" action="admin_supp.php" method="post" id="adminsup">
-                <label for="ticketId">Ticket ID:</label>
-                <input type="text" id="ticketId" name="ticketId" class="form-input"><br>
-
-                <label for="agentName">Agent Name:</label>
-                <input type="text" id="agentName" name="agentName" class="form-input"><br>
+            <form  action="Support_member.php" method="POST">
+                <label for="Subject">Subject:</label>
+                <input type="text" id="Subject" name="Subject" class="form-input" required><br>
 
                 <label for="email">Email:</label>
                 <input type="text" id="email" name="email" class="form-input"><br>

@@ -1,5 +1,8 @@
 <?php
 
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
     // Lakvidu Upasara
 require './config2.php';
 $conn = $con;
@@ -13,18 +16,41 @@ function LoadcourseDetail()
     $_select_course_deatail->execute();
     $Get_course_detail = $_select_course_deatail->get_result();
 
-    echo  "<div class = 'display-full-content'> ";
-    while ($row = $Get_course_detail->fetch_assoc()) {
-          $courseid = $row['Course_id'];
-          $Course_Name = $row ['course_name'] ;
-        echo "<div class='course-box'>";
-        echo "<div class='edit-image'><img src='" . $row['course_image'] . "' alt='" . $row['course_name'] . "'></div>";
-        echo "<h2><a href='resource_management.php?course_id=". $courseid . "'>" . $row['course_name'] . "</a></h2>";
-        echo "<p>Course Id: " . $row['Course_id'] . "</p>";
-        echo "</div>"; 
-    }
+    $user_role = $_SESSION['User_role'];
 
-    echo "</div>";
+    if ($user_role == 'lecture')
+    {
+            echo  "<div class = 'display-full-content'> ";
+            while ($row = $Get_course_detail->fetch_assoc()) {
+                $courseid = $row['Course_id'];
+                $Course_Name = $row ['course_name'] ;
+                echo "<div class='course-box'>";
+                echo "<div class='edit-image'><img src='" . $row['course_image'] . "' alt='" . $row['course_name'] . "'></div>";
+                echo "<h2><a href='resource_management.php?course_id=". $courseid . "'>" . $row['course_name'] . "</a></h2>";
+                echo "<p>Course Id: " . $row['Course_id'] . "</p>";
+                echo "</div>"; 
+            }
+
+            echo "</div>";
+
+    }
+    elseif ($user_role == 'teacher')
+    {
+        echo  "<div class = 'display-full-content'> ";
+        while ($row = $Get_course_detail->fetch_assoc()) {
+            $courseid = $row['Course_id'];
+            $Course_Name = $row ['course_name'] ;
+            echo "<div class='course-box'>";
+            echo "<div class='edit-image'><img src='" . $row['course_image'] . "' alt='" . $row['course_name'] . "'></div>";
+            echo "<h2><a href='viewcourseresourse.php?course_id=". $courseid . "'>" . $row['course_name'] . "</a></h2>";
+            echo "<p>Course Id: " . $row['Course_id'] . "</p>";
+            echo "</div>"; 
+        }
+
+        echo "</div>";
+
+
+    }
 }
 
 
@@ -80,8 +106,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         echo "<script>alert('Course deleted successfully!'); window.location.href = 'lecture_course_dashbord.php';</script>";
                  } else {
                           echo "<script>alert('Error deleting course: " . $stmt->error . "'); window.location.href = 'lecture_course_dashbord.php';</script>";
-                }
-               
+                }   
 
             }
             else
