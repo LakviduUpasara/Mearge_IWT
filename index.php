@@ -50,7 +50,7 @@
          
             <div>
                 <button class ="home-btn" type="button" id = "body-signinbtn" onclick=" openModal();"><span></span>Sign In</button>
-                <button class ="home-btn" type="button"><span></span>Join Now</button>
+               <a href="userRegistation.php"><button class ="home-btn" type="button"><span></span>Join Now</button></a> 
 
             </div>
         </div>
