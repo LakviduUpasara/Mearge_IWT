@@ -19,6 +19,7 @@
         include "navbar.php";
         ?>
         
+        
         <!--Feedbacks-->
         <div class="feedback-tricker">
             <div class="label">Feedback</div>
@@ -53,41 +54,7 @@
         </div>
      </div>
 
-     <div class= "popup">
 
-        <div class ="close-btn">&times;</div>
-        <div class="from-login">
-
-            <form action=""id="loginForm">
-                <h2 id ="sign-heding2"> Sign In</h2>
-
-                <div class = "form-elements">
-
-                <label for="Email">Email</label>
-                <input type="text"id ="Email" name=" Email" placeholder ="Enter Email Address " >
-                </div>
-                <div class="form-elements">
-                    <label for="password">Password</label>
-                    <input type="password" id ="password" name = "password"placeholder ="Enter Password " required>
-                </div>
-
-                <div class="form-elements">
-                    <input type="checkbox" id = "remember-me">
-                    <label for="remember-me">Remember Me </label>
-                </div>
-
-                <div class="form-elements">
-                    <button type="submit" name="submit" value="Login-now" >Sign In</button>
-                </div>
-
-                <div class="form-elements">
-                    <a href="#">Forget password</a>
-                </div>
-            </form>
-
-        </div>
-
-        <script src ="js\signpopup.js"></script>
 
      </div>
      <?php
