@@ -46,7 +46,7 @@
             <!--sign in and join now buttons-->
          
             <div>
-                <button class ="home-btn" type="button" id = "body-signinbtn"><span></span>Sign In</button>
+                <button class ="home-btn" type="button" id = "body-signinbtn" onclick = "openModal();"><Sign In</button>
                 <button class ="home-btn" type="button"><span></span>Join Now</button>
 
             </div>
