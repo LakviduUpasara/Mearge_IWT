@@ -21,7 +21,7 @@
         <div class="vision_mission">
             <div class="content">
                 <div class="vision_mission_image">
-                    <img src="vissionimage.jpg" alt="Vision image" width="150" height="150"/>
+                    <img src="images/vissionimage.jpg" alt="Vision image" width="150" height="150"/>
                 </div>
                 <div class="text">
                     <h2>Vision</h2>
@@ -32,7 +32,7 @@
         <div class="vision_mission">
             <div class="content">
                 <div class="vision_mission_image">
-                    <img src="missioimage1.jpg" alt="Mission image" width="150" height="10" style="background-color: #a3d9a5;"/>
+                    <img src="images/missioimage1.jpg" alt="Mission image" width="150" height="10" style="background-color: #a3d9a5;"/>
                 </div>
                 <div class="text">
                     <h2>Mission</h2>
@@ -53,7 +53,7 @@
            <div class="card">
             <div class="content">
                 <div class="img">
-                    <img src="img1.jpg" alt="" width="100px"></img>
+                    <img src="images/img1.jpg" alt="" width="100px"></img>
                 </div>
                 <div class="details">
                     <div class="name">DR.John Smith</div>
@@ -66,7 +66,7 @@
         <div class="card">
             <div class="content">
                 <div class="img">
-                    <img src="img2.jpg" alt="" width="100px"></img>
+                    <img src="images/img2.jpg" alt="" width="100px"></img>
                 </div>
                 <div class="details">
                     <div class="name">Prof.Jane Doe</div>
@@ -79,7 +79,7 @@
         <div class="card">
             <div class="content">
                 <div class="img">
-                    <img src="img3.jpg" alt="" width="100px"></img>
+                    <img src="images/img3.jpg" alt="" width="100px"></img>
                 </div>
                 <div class="details">
                     <div class="name">Alex Brown</div>
@@ -92,7 +92,7 @@
         <div class="card">
             <div class="content">
                 <div class="img">
-                    <img src="img 4.jpg" alt="" width="100px"></img>
+                    <img src="images/img 4.jpg" alt="" width="100px"></img>
                 </div>
                 <div class="details">
                     <div class="name">Ms.Emily White</div>
@@ -110,10 +110,10 @@
         <div class="footer-col">
             <h4>Quick Links</h4>
             <ul>
-            <li><a href="home.php">-Home</a></li>
-            <li><a href="About us.php">-About Us</a></li>
+            <li><a href="index.php">-Home</a></li>
+            <li><a href="aboutUs.php">-About Us</a></li>
             <li><a href="contactUs.php">-Conatct Us</a></li>
-            <li><a href="#">-Privacy And Policy</a></li>
+            <li><a href="PrivacyPolicyContent.php">-Privacy And Policy</a></li>
             </ul>
         </div>
         <div class="footer-col">
