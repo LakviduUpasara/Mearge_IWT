@@ -60,10 +60,10 @@
                 <input type="text" id="Subject" name="Subject" class="form-input" required><br>
 
                 <label for="email">Email:</label>
-                <input type="text" id="email" name="email" class="form-input"><br>
+                <input type="text" id="email" name="email" class="form-input" required><br>
 
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" placeholder="Further Explanation" class="form-textarea"></textarea><br>
+                <textarea id="message" name="message" placeholder="Further Explanation" class="form-textarea" required></textarea><br>
 
                 <button class="submit-btn" id="submit" type="submit" value="submit" name="submit">Submit</button>
             </form>
