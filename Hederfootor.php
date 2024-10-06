@@ -2,7 +2,7 @@
 
     function    ManagemntNavbr()
     {
-        $user_role = $_SESSION['user_id'];
+        $user_role = $_SESSION['User_role'];
         // Redirect based on user role
         switch ($user_role) {
             case 'admin':
