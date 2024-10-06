@@ -34,10 +34,11 @@ $query1 = "INSERT INTO admin_support VALUES ('$S_ticket_id','$User_Ticket_id', '
 
 if($con->query($query1))//hj 
 {
-    
+    header("Location:admin_support.php") ;
     echo "success";
 }
 else{
+    header("Location:admin_support.php") ;
     echo "unsuccessful".$con->error;
 }
 

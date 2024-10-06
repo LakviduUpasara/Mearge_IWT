@@ -52,7 +52,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if ($stmt1->execute()) {
             echo " <script> alert ('Data inserted successfully');";
+            header("Location:.cont2.php") ;
         } else {
+            header("Location:.cont2.php") ;
             echo "Insertion failed: " . $conn->error;
         }
         
@@ -68,8 +70,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt2->bind_param('isss', $contact_id, $Name, $Phone_no, $Message);
 
         if ($stmt2->execute()) {
-            echo "Data inserted successfully";
+            header("Location:.cont2.php") ;
+            echo " <script> alert ('Data inserted successfully');</script>";
         } else {
+            header("Location:.cont2.php") ;
+
             echo "Insertion failed: " . $conn->error;
         }
     }

@@ -1,19 +1,70 @@
-html, body {
-    height: 100%;
+/* Basic form container */
+fieldset {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px auto;
+    width: 50%;
+    background-color: #f9f9f9;
+    border-radius: 10px;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-}
-
-main {
-    flex: 1; /* This makes the main section take up available space */
-}
-
-footer {
-    background-color: #0d0b56; /* Change to your desired footer color */
-    color: white; /* Change text color as needed */
+#subheading {
+    font-size: 1.5em;
     text-align: center;
-    padding: 10px 0; /* Some padding for the footer */
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Labels styling */
+label {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Input fields styling */
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+/* Textarea styling */
+.form-textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+/* Submit button styling */
+.submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+/* Error message styling */
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-bottom: 15px;
 }
