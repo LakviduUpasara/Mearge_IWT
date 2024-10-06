@@ -10,7 +10,11 @@ require 'config2.php';
 if ($_SERVER($_POST[ "REQUEST _METHOD" ] == "POST") )
 {
 
-    
+    if(isset($_POST["submit"]))
+    {
+            $sql = "INSERT INTO  tickets Values " ;
+
+    }
 
 
 }
