@@ -9,8 +9,8 @@ body {
   .notice-conetent{
 
     border-width: 2px;
-    background-color: #fff !important;
-    padding: 6px 5px!important ;
+    background-color: #fff;
+    padding: 6px 5px ;
     margin: 10px 0;
   }
   .notice-conetent h5{
@@ -21,8 +21,8 @@ body {
   .note-heading{
 
     border-width: 1px;
-    background-color: #e22f13 !important;
-    padding: 2px 2px!important ;
+    background-color: #e22f13;
+    padding: 2px 2px;
     margin: 5px 0;
     color: white;
    

@@ -1,0 +1,99 @@
+/* General Styles */
+body {
+    font-family: sans-serif; /* Sans-serif font */
+    background-color: #f0f8ff; /* Light blue background */
+    color: #333;
+    min-height: 100vh;
+    background-image: linear-gradient(to right, rgba(20, 21, 21, 0.8), rgba(20, 20, 20, 0.8)), 
+                      url("../images/background3.jpg"); /* Blue gradient + background image */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Wrapper */
+.wrapper {
+    background-color: #ffffff; /* White background for form container */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    max-height: 600px;
+    text-align: center;
+    margin-top: 3%;
+    margin-left: 33%;
+    margin-bottom: 2%;
+}
+
+/* Title */
+.title {
+    font-size: 24px;
+    color: #003366; /* Dark blue color */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Form Fields */
+.field {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.field input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+    background-color: transparent;
+}
+
+.field input:focus {
+    outline: none;
+    border-color: #005bb5; /* Blue border on focus */
+}
+
+.field label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #666;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+/* Floating Labels */
+.field input:focus + label,
+.field input:not(:placeholder-shown) + label {
+    top: 0;
+    left: 10px;
+    font-size: 12px;
+    color: #005bb5; /* Blue color for focused label */
+    font-weight: bold;
+}
+
+/* Button */
+.btn input[type="submit"] {
+    background-color: #005bb5; /* Blue button */
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.btn input[type="submit"]:hover {
+    background-color: #004999; /* Darker blue on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .wrapper {
+        width: 90%;
+    }
+}

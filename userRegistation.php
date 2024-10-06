@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pop-Up Sign-Up Form</title>
     <link rel="stylesheet" href="styles/userRegistation.css">
+    <link rel="stylesheet" href="styles/userReg.css">
 
 </head>
 <body>
@@ -45,7 +46,9 @@
         </form>
       </div>
     </div>
-
+<?php
+include "footer.php"
+?>
 <script src="userRegistation.js"></script>
 
 </body>

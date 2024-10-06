@@ -9,7 +9,6 @@
         <?php
 
             include 'navbar.php';
-      
       ?>
     <!--vision mission-->
     <div class="full">
