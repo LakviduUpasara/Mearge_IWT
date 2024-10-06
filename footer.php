@@ -16,9 +16,9 @@
         <div class="footer-col">
             <h4>Quick Links</h4>
             <ul>
-            <li><a href="home.php">-Home</a></li>
-            <li><a href="About us.php">-About Us</a></li>
-            <li><a href="#">-Conatct Us</a></li>
+            <li><a href="index.php">-Home</a></li>
+            <li><a href="aboutUs.php">-About Us</a></li>
+            <li><a href="contactUs.php">-Conatct Us</a></li>
             <li><a href="PrivacyPolicyContent.php">-Privacy And Policy</a></li>
             </ul>
         </div>
