@@ -141,9 +141,8 @@ function closePopup1(){
 
         <?php
 
-        include    'Hederfootor.php';
-        ManagemntNavbr() ;
-        Managemntfooter()
+         include 'Hederfootor.php';
+         Managemntfooter();
         ?>
 
 </body>
