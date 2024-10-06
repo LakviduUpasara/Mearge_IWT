@@ -49,7 +49,7 @@
                         }
 
                         $user_role = $user['User_role'];
-                        $_SESSION['User Role']  = $user_role;
+                        $_SESSION['User_Role']  = $user_role;
                         $_SESSION ['User_id'] = $user['User_id'];
                         $_SESSION ['First_Name	'] = $user['User_name'];
 
