@@ -3,12 +3,12 @@
     if (session_status() == PHP_SESSION_NONE) {
       session_start();
     }
-    if(isset($_SESSION['error']))
+    if(isset($_SESSION['success']))
     {
        
         echo" <script>alert('successfully completed ') ;</script>" ;
 
-    } else if(isset($_SESSION['success']))
+    } else if(isset($_SESSION['error']))
     {
     
       echo" <script>alert('unsuccessfully completed') ;</script>" ;
@@ -23,9 +23,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Support Dashboard</title>
+  <title>TeachWave Online Teacher Trainer</title>
 
   <link rel ="stylesheet" type="text/css" href="./styles/support_dahsboard_style.css">
+  
   <!--header and footer-->
  
 
@@ -38,48 +39,37 @@
 
 <main ><!--<div class="banner">-->
   <div class="content">
-    <h2 id="announcemnts">Announcements</h2>
-    <div class="announcements">
-      <table class="Annu-table">
+  <h2 id="announcemnts">Announcements</h2>
+<div class="announcements">
+    <table class="Annu-table">
         <thead>
-          <tr>
-            <th>Topic</th>
-            <th>Description</th>
-          </tr>
+            <tr>
+                <th>Topic</th>
+                <th>Description</th>
+            </tr>
         </thead>
         <tbody>
-
-          <?php
-
+            <?php
             require './config2.php';
 
-            $sqlAnnou    = "SELECT Topic, Description FROM announcement_detail";
-
+            $sqlAnnou = "SELECT Topic, Description FROM announcement_detail";
             $announcement = $con->query($sqlAnnou);
 
-            if($announcement->num_rows > 0)//checking for the data in table
-            {
-                
-                while($row = $announcement->fetch_assoc())//fetch oone raw at a time
-                {
-                    echo"<tr>";
-                    echo "<td>".$row["Topic"]."</td>"."<td>".$row["Description"]."</td>";
-                    echo"</tr>";
+            if ($announcement->num_rows > 0) { // Checking for the data in the table
+                while ($row = $announcement->fetch_assoc()) { // Fetch one row at a time
+                    echo "<tr>";
+                    echo "<td>" . htmlspecialchars($row["Topic"]) . "</td>" . "<td>" . htmlspecialchars($row["Description"]) . "</td>";
+                    echo "</tr>";
                 }
-              
-            }
-            else
-            {
-                echo "<tr";
-                echo "<td>"."-"."</td>"."<td>"."No Announcements Yet"."</td>";
+            } else {
+                echo "<tr class='no-announcement'>";
+                echo "<td>-</td><td>No Announcements Yet</td>";
                 echo "</tr>";
             }
-
-          ?>
-
+            ?>
         </tbody>
-      </table>
-    </div>
+    </table>
+</div>
 
     <h2 id="ticket">Ticket Review</h2>
 

@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TeachWave</title>
+    <title>TeachWave Online Teacher Trainer</title>
     <link rel ="stylesheet" href ="styles\user_management.css">
     <link rel ="stylesheet" href ="styles\admin_dashboard.css">
     <link rel ="stylesheet" href ="styles\admin_usertable.css">

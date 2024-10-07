@@ -24,7 +24,7 @@ if (session_status() == PHP_SESSION_NONE) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support Member</title>
+    <title>TeachWave Online Teacher Trainer</title>
     <link rel="stylesheet" href="styles/support_member.css">
     <link rel="stylesheet"  href="styles/UserProfile.css">
 

@@ -8,7 +8,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Privacy Policy - TechWave Online Teacher Training</title>
+    <title>TechWave Online Teacher Trainer</title>
     <style>
         body {
             font-family: Arial, sans-serif;

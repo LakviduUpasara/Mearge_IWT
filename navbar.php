@@ -1,9 +1,13 @@
+<?php
+ob_start(); 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TeachWave Online Teacher Trainer</title>
     
     <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/signpopup.css">
@@ -26,9 +30,12 @@
 
             <div class="form-elements">
                 <?php 
-                     if (session_status() == PHP_SESSION_NONE) {
-                        session_start();
+                    
+                    if (session_status() == PHP_SESSION_NONE) {
+                         session_start();
                     }
+                
+                    
                     if(isset($_SESSION['error']))
                     {
                         echo "<p id='message'>".$_SESSION['error']."</p>" ;
@@ -80,11 +87,8 @@
     </ul>
     
 </div>
-
-
-
-
-
-    
 </body>
 </html>
+<?php
+    ob_end_flush(); 
+?>

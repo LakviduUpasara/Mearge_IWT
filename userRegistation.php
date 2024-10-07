@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pop-Up Sign-Up Form</title>
+    <title>TeachWave Online Teacher Trainer</title>
     <link rel="stylesheet" href="styles/userRegistation.css">
     <link rel="stylesheet" href="styles/userReg.css">
 </head>
