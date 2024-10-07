@@ -1,292 +1,361 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #dadddf;
-    background-size: cover;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  background-size: cover;
 }
 
-  /* Courses Section */
+/* Courses Section */
 
 
 .courses {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-    
+  
 
 .image-container {
-    position: relative;
-    width: 300px; /* Adjust the size of the container */
-    height: 200px; /* Adjust based on your image size */
+  position: relative;
+  width: 300px; /* Adjust the size of the container */
+  height: 200px; /* Adjust based on your image size */
 }
 
 .image-container img {
-    width: 100%; /* Make the image fit the container */
-    height: 100%; /* Adjust to container height */
-    display: block;
+  width: 100%; /* Make the image fit the container */
+  height: 100%; /* Adjust to container height */
+  display: block;
 }
 
 .overlay-content {
-    position: absolute; /* Absolute positioning relative to the image container */
-    top: 0; /* Position it at the top of the image */
-    left: 0; /* Position it at the left of the image */
-    width: 100%; /* Full width of the container */
-    height: 100%; /* Full height of the container */
-    background-color: rgba(0, 0, 0, 0.5); /* Transparent dark background */
-    color: rgb(108, 99, 155); /* White text for contrast */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center the content vertically */
-    align-items: center; /* Center the content horizontally */
-    text-align: center; /* Center the text */
+  position: absolute; /* Absolute positioning relative to the image container */
+  top: 0; /* Position it at the top of the image */
+  left: 0; /* Position it at the left of the image */
+  width: 100%; /* Full width of the container */
+  height: 100%; /* Full height of the container */
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent dark background */
+  color: rgb(108, 99, 155); /* White text for contrast */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the content vertically */
+  align-items: center; /* Center the content horizontally */
+  text-align: center; /* Center the text */
 }
 
 .overlay-content h2, .overlay-content p {
-    margin: 0;
-    padding: 5px 10px;
-    font-size: 16px;
+  margin: 0;
+  padding: 5px 10px;
+  font-size: 16px;
 }
 
 .course-box {
-    background-color: #504f86;
-    padding: 20px; 
-    text-align: left;
-    border-radius: 10px;
-    width: 200px;
-    height: 210px;
-    margin: 25px 30px 25px 25px ;
-    position: relative; 
-    display: inline-block;
-    color: white;
+  background-color: #0d0b56;
+  padding: 20px;
+  text-align: left;
+  border-radius: 15px;
+  width: 250px;
+  height: 350px; /* Adjusted height to accommodate image */
+  margin: 25px 30px 25px 25px;
+  position: relative;
+  display: inline-block;
+  color: #ffffff;
+  border: 2px solid #0d0b56;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
 }
-
 
 .course-box img {
-    width: 120px;
-    border-radius: 5px;
+  width: 100%;
+  height: 150px; /* Fixed height for image */
+  object-fit: cover; /* Ensures the image covers the space without distortion */
+  border-radius: 10px 10px 0 0; /* Rounded corners for top part */
 }
+
+.course-box:hover {
+  transform: translateY(-10px) scale(1.05) rotateY(10deg);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  background-color: #080424;
+}
+
+.course-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 300%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05), transparent);
+  transform: skewX(-25deg);
+  transition: 0.7s ease-in-out;
+}
+
+.course-box:hover::before {
+  left: 125%;
+}
+
+.course-box h3 {
+  margin: 10px 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffcc00;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.course-box p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ddd;
+}
+
 .course-box a {
-    color: white;
-    text-decoration: none;
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  margin-top: 15px;
+  transition: color 0.3s ease;
+}
+
+.course-box a:hover {
+  color: #ffffff;
+}
+
+.course-box a {
+  color: white;
+  text-decoration: none;
 }
 
 .course-box h2 {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
- .popup{
+.popup{
 
-    position: absolute;
-    top:-150%;
-    left: 50%;
-    opacity: 0;
-    transform: translate(-50%,-50%) scale(1.25);
-    width: 450px;
-    padding: 20px 30px;
-    background: #ffffff;
-    box-shadow: 2px 2px 5px 5px rgba(0,0,0,0,15);
-    border-radius: 10px;
-    height: 70vh;
-    transition: top 0ms ease-in-out 200ms ,
-                opacity 200ms ease-in-out 0ms ,
-                transform 20ms ease-in-out 0ms ;
+  position: absolute;
+  top:-150%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%,-50%) scale(1.25);
+  width: 450px;
+  padding: 20px 30px;
+  background: #ffffff;
+  box-shadow: 2px 2px 5px 5px rgba(0,0,0,0,15);
+  border-radius: 10px;
+  height: 70vh;
+  transition: top 0ms ease-in-out 200ms ,
+              opacity 200ms ease-in-out 0ms ,
+              transform 20ms ease-in-out 0ms ;
 
 
 }
 
 .popup.active{
 
-    top: 50%;
-    opacity: 1;
-    transform: translate(-50%,-50%) scale(1);
-    transition: top 0ms ease-in-out 0ms ,
-    opacity 200ms ease-in-out 0ms ,
-    transform 20ms ease-in-out 0ms ;
+  top: 50%;
+  opacity: 1;
+  transform: translate(-50%,-50%) scale(1);
+  transition: top 0ms ease-in-out 0ms ,
+  opacity 200ms ease-in-out 0ms ,
+  transform 20ms ease-in-out 0ms ;
 
 }
 .popup .close-btn {
 
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 15px;
-    height: 15px;
-    background: #888;
-    color: #eee;
-    text-align: center;
-    line-height: 15px;
-    border-radius: 15px;
-    cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 15px;
+  height: 15px;
+  background: #888;
+  color: #eee;
+  text-align: center;
+  line-height: 15px;
+  border-radius: 15px;
+  cursor: pointer;
 }
 
 
 .popup  .form-elements {
-    margin: 15px 0px;
-    position: relative;
+  margin: 15px 0px;
+  position: relative;
 }
 
 .popup .form-elements label {
 
-    font-size: 14px;
-    color: #222;
+  font-size: 14px;
+  color: #222;
 
 }
 .popup .form-elements input[type ="text"] ,
 .popup .form-elements input[type ="password"]{
-    
-    margin-top: 5px;
-    display: block;
-    width: 100%;
-    padding: 10px;
-    outline: none;
-    border-radius: 5px;
-    border: 1px solid #aaa;
+  
+  margin-top: 5px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #aaa;
 }
 .popup .form-elements input[type ="checkbox"] {
-    margin-right: 5px;
-    
+  margin-right: 5px;
+  
 }
 .popup  .form-elements button
- {
-    
-    width: 100%;
-    height: 5vh;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    background-color: #222;
-    color: #f5f5f5;
-    border-radius: 10px;
-    cursor: pointer;
+{
+  
+  width: 100%;
+  height: 5vh;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background-color: #222;
+  color: #f5f5f5;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .popup  .form-elements a {
 
-    display: block;
-    text-align: center;
-    font-size: 15px;
-    color: #1a79ca;
-    text-decoration: none;
-    font-weight: 600;
-    
+  display: block;
+  text-align: center;
+  font-size: 15px;
+  color: #1a79ca;
+  text-decoration: none;
+  font-weight: 600;
+  
 }
 
 .popup.form-elements .dnt-acc{
-    text-align: center;
-    text-decoration: underline;
-    color: #030303;
+  text-align: center;
+  text-decoration: underline;
+  color: #030303;
 }
 .button-container {
-    display: flex;
-    align-items: center;
-    margin-left: 450px;
+  display: flex;
+  align-items: center;
+  margin-left: 450px;
 }
 .course-btn{
 
-    display: inline-block;
-    margin-left: 10px;
-    padding: 10px;
+  display: inline-block;
+  margin-left: 10px;
+  padding: 10px;
 }
 
 #create-course-btn {
-    background-color: #2F4F7F;
-    color: #FFFFFF; 
-    border: none; 
-    padding: 10px; 
-    font-size: 16px; 
-    cursor: pointer; 
-  }
+  background-color: #0d0b56; /* Dark blue background for consistency */
+  color: #FFFFFF; /* White text color */
+  border: 2px solid #1a19b3; /* Lighter blue border */
+  padding: 10px; /* Padding for comfortable clicking */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold text for emphasis */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
 #create-course-btn:hover {
-    background-color: #96a521; 
-  }
-#Update-course-btn
-{
-    background-color: #122553;
-    color: #FFFFFF; 
-    border: none; 
-    padding: 10px; 
-    font-size: 16px; 
-    cursor: pointer; 
+  background-color: #1b158a; /* Slightly lighter blue on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
 }
+ 
+#Update-course-btn {
+  background-color: #122553; /* Darker blue background */
+  color: #FFFFFF; /* White text color */
+  border: 2px solid #1a19b3; /* Lighter blue border for consistency */
+  padding: 10px; /* Padding for comfort */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold text for emphasis */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
 #Update-course-btn:hover {
-
-    background-color: #21a54b; 
-  }
-#delete-course-btn
-{
-    background-color: #122553;
-    color: #FFFFFF; 
-    border: none; 
-    padding: 10px; 
-    font-size: 16px; 
-    cursor: pointer; 
+  background-color: #1b158a; /* Brighter dark blue on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
 }
-#delete-course-btn:hover {
 
-    background-color: #a54021; 
-  }
+#delete-course-btn {
+  background-color: #122553; /* Darker blue background */
+  color: #FFFFFF; /* White text color */
+  border: 2px solid #1a19b3; /* Lighter blue border for consistency */
+  padding: 10px; /* Padding for comfort */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold text for emphasis */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+#delete-course-btn:hover {
+  background-color: #1b158a; /* Red on hover to indicate deletion */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
+}
+
 #create-course-heding{
 
-    text-align: center;
-    color: #222;
-    margin: 10px 0px 20px ;
-    font-size: 20px;
+  text-align: center;
+  color: #222;
+  margin: 10px 0px 20px ;
+  font-size: 20px;
 
 
 }
 #course_image{
-    padding: 2px;
-    margin: 2px;
-    background-color: rgb(151, 38, 38);
-    width: 300px;
+  padding: 2px;
+  margin: 2px;
+  background-color: rgb(151, 38, 38);
+  width: 300px;
 }
 #create-course{
 
-    width: 100%;
-    height: 5vh;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    background-color: #222;
-    color: #f5f5f5;
-    border-radius: 10px;
-    cursor: pointer;
+  width: 100%;
+  height: 5vh;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background-color: #222;
+  color: #f5f5f5;
+  border-radius: 10px;
+  cursor: pointer;
 }
 .courses-section{
 
-    text-align: center;
-    padding: 10px;
-    margin: center;
-    color: #122553;
+  text-align: center;
+  padding: 10px;
+  margin: center;
+  color: #122553;
 }
 .popup .submit-button-style
 {
-    width: 100%;
-    height: 5vh;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    background-color: #222;
-    color: #f5f5f5;
-    border-radius: 10px;
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    left: 0;
+  width: 100%;
+  height: 5vh;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background-color: #222;
+  color: #f5f5f5;
+  border-radius: 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .hidden-button {
-    display: none;
+  display: none;
 }
 .footer-setup
 {
-  margin-bottom: 90%;
-  padding: 150px;
+margin-bottom: 90%;
+padding: 150px;
 
 }
 .display-full-content{
-    display: contents;
-    align-items: center;
-    margin-right: 20%;
-    padding-left: 20px;
+  display: contents;
+  align-items: center;
+  margin-right: 20%;
+  padding-left: 20px;
 
 }

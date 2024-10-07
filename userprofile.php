@@ -1,4 +1,20 @@
-
+<?php
+     if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
+     if(isset($_SESSION['error']))
+     {
+        
+         echo" <script>alert('User details updated successfully') ;</script>" ;
+ 
+     } else if(isset($_SESSION['success']))
+     {
+     
+       echo" <script>alert('Failed to update user details') ;</script>" ;
+     }
+       unset($_SESSION['error']);
+       unset($_SESSION['success']);
+?>
 <!--table of user profiles-->
 <!DOCTYPE html>
 <html lang="en">
@@ -75,6 +91,7 @@
                 <h1>Edit Profile</h1>
             </div>
             <form class="profile-form" action="userprofilecntrl.php" method = "post">
+                
                 <div class="input-item">
                     <label for="sid">User ID:</label>
                     <input type="text" name="sid" id="sid" required><br><br>

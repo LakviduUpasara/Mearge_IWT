@@ -1,4 +1,24 @@
-<!DOCTYPE html>
+
+<?php
+
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+   
+    if(isset($_SESSION['success']))
+    {
+       
+        echo" <script>alert('successfully completed ') ;</script>" ;
+
+    } else if(isset($_SESSION['error']))
+    {
+    
+      echo" <script>alert('unsuccessfully completed') ;</script>" ;
+    }
+      unset($_SESSION['error']);
+      unset($_SESSION['success']);
+
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>

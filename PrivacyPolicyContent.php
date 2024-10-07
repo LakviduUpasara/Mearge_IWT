@@ -101,11 +101,10 @@ session_start();
 
         <div class="section-title">8. Contact Us</div>
         <p>If you have any questions or concerns regarding this Privacy Policy, please contact us at <a href="mailto:support@techwave.com">support@techwave.com</a>.</p>
-
-        <footer>
-            &copy; <?php echo date('Y'); ?> TechWave Online Teacher Training. All rights reserved.
-        </footer>
-    </div>
     
+    <?php 
+
+            include './footer.php';
+    ?>
 </body>
 </html>

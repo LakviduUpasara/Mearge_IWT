@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $subject = $_POST['Subject'];
     $email = $_POST['email'];
     $message = $_POST['message'];
-    $reply = "Null";
+    $reply = "Pending";
 
     if (isset($_POST['submit'])) {
         
@@ -39,9 +39,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
            
             $stmt->bind_param("issss", $ticked_id, $subject, $email, $message, $reply);
 
-         
+           
+            
+
             if ($stmt->execute()) {
-                echo "New ticket created successfully!";
+
+                $_SESSION['success'] =  "New ticket created successfully!";
+                header('location: Support_member.php');
+
             } else {
                 echo "Error: " . $stmt->error;
             }
@@ -49,7 +54,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
          
             $stmt->close();
         } else {
-            echo "Error preparing statement: " . $con->error;
+            $_SESSION['error'] = "Error preparing statement: " ;
+            header('location: Support_member.php');
+
         }
     }
 }

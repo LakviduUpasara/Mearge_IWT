@@ -1,86 +1,106 @@
-/*nav and header-imesha*/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-  }
+.search-button:hover {
+  background-color: #F2C464; /* Hover background color */
+}
 
-  .logo{
-    width: 120px;
-    margin-left:40px;
-    cursor: pointer;
-  }
-  .logo:hover{
-    top: 10%;
-    bottom: 10%;
-    left: 10%;
-    right: 10%;
-    transform: translate(10%, 10%) scale(1.2); 
-  }
-  .arrow{
-    width: 35px;
-    margin-right: 80px;
-    cursor: pointer;
-  }
-  .navbar{
-    width: 100%;
-    margin: auto;
-    padding: 35px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .sup_header{
-    margin: auto;
-    padding: 30px ;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color:#0d0b56;
-    height: 50px;
-  }
-  .sup_navbar{
-    margin-left: 80px;
-  }
-  .sup_navbar ul li{
-    list-style: none;
-    display: inline-block;
-    margin: 0 20px ;
-    position: relative;
-    z-index: 1;
-  }
-  .sup_navbar ul li a{
-    text-decoration: none;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 13px;
-    font-weight: bold;
-  }
-  .sup_navbar ul li::after{
-    content:'';
-    height: 3px;
-    width: 0;
-    background: #009688;
-    position:absolute;
-    left: 0;
-    bottom: -10px;
-    transition: 0.5s;
-  }
-  .sup_navbar ul li:hover::after{
-    width: 100%;
-  }
-  .arrow:hover{
-      transform: scale(1.1);
-  }
+.search-button i {
+  margin-right: 5px; /* Add some space between icon and text */
+}
+.logout-side{
 
-  main {
-    padding-block: 20px;
-    margin-block: 30px;
-  }
-  /*active window*/
-.nav:active{
-  background-color: #f6f7f9;
-  color: #0d0b56;
-  padding-block: 5px;
+  margin-right: 15px;
+}
+.logout-side .logout-label {
+  color: white; 
+  text-decoration: none; 
+  letter-spacing: 2px;
+  transition: 0.5s; 
+  text-align: center;
+}
+
+.logout-side .logout-label:hover {
+  color: red; /* Changes color to red on hover */
+  padding: 10px; /* Adds padding on hover */
+  transition: 0.5s; /* Transition effect for color and padding */
+}
+.logout-side .profile{
+
+  align-items: center;
+}
+
+
+.logo {
+  width: 120px;
+  cursor: pointer;
+  margin-left: 50px;
+}
+
+
+.navbar {
+  width: 100%;
+  margin: auto;
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0d0b56;
+}
+
+.navbar ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.navbar ul li::after {
+  content: '';
+  height: 3px;
+  width: 0;
+  background: #009688;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+  width: 100%;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.search-bar {
+  margin: 20px;
+  text-align: center;
+}
+
+.search-bar input {
+  padding: 10px;
+  width: 80%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.search-button {
+  background-color: #F7DC6F; /* Yellow background color */
+  color: #333; /* Text color */
+  border: none; /* Remove default border */
+  padding: 10px 20px; /* Add some padding */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Change cursor to pointer */
 }

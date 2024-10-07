@@ -3,8 +3,9 @@
 .container{
     max-width: 900px;
     padding: 38px;
-    margin: 30px 28px;
+    margin: 100 28px;
     box-shadow: 0 15px 20px #ABB2B9;
+   
 }
 
 h2{

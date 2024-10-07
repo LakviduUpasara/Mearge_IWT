@@ -1,7 +1,9 @@
 <?php
         require './config2.php';
 
-        session_start();
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
 
         $course_id = $_GET['course_id']; 
         $query = "SELECT * FROM course_detail WHERE Course_id = ?";

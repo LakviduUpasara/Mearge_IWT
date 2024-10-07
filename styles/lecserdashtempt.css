@@ -1,59 +1,67 @@
 /* General Styles */
-
 body {
-    font-family: Arial, sans-serif;
-    background-color: #dadddf;
-    background-size: cover;
+  font-family: sans-serif;
+  background-color: #1a1a2e; /* Darker background for better contrast */
+  color: #e2e2e2; /* Light text color for readability */
+  margin: 0; /* Remove default margin */
+  padding: 10px; /* Add padding to body for breathing space */
 }
 
-  .notice-conetent{
+.notice-content { /* Fixed typo: "notice-conetent" to "notice-content" */
+  border: 2px solid #0f3460; /* Dark blue border */
+  background-color: #16213e; /* Dark background for notice */
+  padding: 10px; /* Moderate padding for spacing */
+  margin: 10px 0; /* Space between notices */
+  border-radius: 8px; /* Slightly rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
+}
 
-    border-width: 2px;
-    background-color: #fff;
-    padding: 6px 5px ;
-    margin: 10px 0;
-  }
-  .notice-conetent h5{
-    text-align: justify;
-    margin: 2px 2px 2px ,2px;
-    padding: 2px ,2px ,2px,2px;
-  }
-  .note-heading{
+.notice-content h5 {
+  text-align: justify; /* Justify text for better alignment */
+  margin: 5px 0; /* Uniform margins */
+  padding: 0; /* Removed padding for a cleaner look */
+  color: #ffffff; /* White color for better visibility */
+}
 
-    border-width: 1px;
-    background-color: #e22f13;
-    padding: 2px 2px;
-    margin: 5px 0;
-    color: white;
-   
+.note-heading {
+  border: 1px solid #e94560; /* Bright pink border for contrast */
+  background-color: #0f3460; /* Darker blue for visibility */
+  padding: 5px; /* Reduced padding */
+  margin: 5px 0; /* Space below the heading */
+  color: #ffffff; /* White text color */
+  border-radius: 4px; /* Rounded corners */
+}
 
-  }
-  .note-heading h2{
+.note-heading h2 {
+  color: #ffffff; /* White color for heading */
+  margin: 0; /* No margins for consistency */
+  padding: 0; /* No padding for consistency */
+}
 
-
-    color: white;
-    margin-left: 10 px;
-   
-
-  }
 /* Announcement */
 .announcement {
-    margin: 20px;
+  margin: 15px; /* Reduced margin */
+  padding: 15px; /* Moderate padding */
+  background-color: #16213e; /* Darker background for announcements */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
 }
 
 .announcement-heading {
-    text-align: center;
-    font-size: 2em;
-    color: #0d0b56;
+  text-align: center; /* Centered heading */
+  font-size: 1.8em; /* Reduced size for compactness */
+  color: #e94560; /* Bright pink color for visibility */
+  margin-bottom: 10px; /* Spacing below the heading */
 }
 
 .announcement-content h1 {
-    font-size: 1.5em;
+  font-size: 1.5em; /* Slightly smaller for compactness */
+  color: #00adb5; /* Teal color */
+  margin: 5px 0; /* Spacing above and below */
 }
 
 .announcement-content h5 {
-    font-size: 1.2em;
-    color: #555;
+  font-size: 1.1em; /* Reduced size for subheading */
+  color: #ffffff; /* Light gray color for subheadings */
+  margin: 5px 0; /* Spacing above and below */
 }
-
-

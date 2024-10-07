@@ -20,6 +20,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Course_Resources</title>
     <link rel="stylesheet" href="styles/Course_Resourse.css">
+    
 </head>
 <body>      
         
@@ -27,6 +28,8 @@
             <?php
 
                     require './Teacher_navbar.php' ;
+
+                    echo  "<h1>Welcome To : $course_name :  $course_id  </h1>";
 
                     $query = "SELECT * FROM course_resources WHERE Course_id = ? ORDER BY Resource_id DESC; ";
                     $_select_course_Resourse = $con->prepare($query);

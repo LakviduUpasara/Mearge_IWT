@@ -32,7 +32,7 @@
         </a>
     </div>
     <div>
-         <a onclick="confirmLogout();" href="javascript:void(0);" class="logout-label">Logout</a>
+         <a onclick="return confirmUpdate()" href="javascript:void(0);" class="logout-label">Logout</a>
         </div>
     </div>
 </div>
@@ -93,7 +93,7 @@
                         </div>
                         
                     <div class="button-container">
-                        <button onclick="confirmUpdate()" style="width:100%" type="Submit" name="update">Reply</button>
+                        <button onclick="replyupdate()" style="width:100%" type="Submit" name="update">Reply</button>
                     </div>
                     <!-- Js file of confirm update -->
                     <script src="js/confirmUpdate.js"></script>
@@ -157,7 +157,7 @@
                         </div>
                         
                     <div class="button-container">
-                        <button onclick="confirmUpdate()" style="width:100%" type="Submit" name="supdate">Reply</button>
+                        <button onclick="replyupdate()" style="width:100%" type="Submit" name="supdate">Reply</button>
                     </div>
                     <!-- Js file of confirm update -->
                     <script src="js/confirmUpdate.js"></script>
@@ -170,7 +170,7 @@
  <div id="response">
         <?php
         if (isset($_SESSION['message'])) {
-            echo $_SESSION['message'];
+            echo "<script>alert('".$_SESSION['message']."');</script>";
             // Clear the session message after displaying it
             unset($_SESSION['message']);
         }

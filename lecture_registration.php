@@ -32,7 +32,7 @@
         </a>
     </div>
     <div>
-        <a onclick="confirmLogout();" href="javascript:void(0);" class="logout-label">Logout</a>
+        <a onclick="return confirmUpdate()" href="javascript:void(0);" class="logout-label">Logout</a>
         </div>
     </div>
 </div>
@@ -141,12 +141,26 @@
 <div id="response">
         <?php
         if (isset($_SESSION['message'])) {
-            echo $_SESSION['message'];
+            echo "<script>alert('".$_SESSION['message']."');</script>";
             // Clear the session message after displaying it
             unset($_SESSION['message']);
         }
         ?>
     </div>
+
+    <div class="swiper-pagination"></div>
+
+      <!-- Navigation Buttons -->
+      <div class="swiper-slide-button swiper-button-prev"></div>
+      <div class="swiper-slide-button swiper-button-next"></div>
+    </div>
+  </div>
+
+  <!-- Linking SwiperJS script -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Linking custom script -->
+  <script src="script.js"></script>
 <footer>
   <img class="footerLogo" src="./images/logo.png" alt="teachWave logo">
   <p> &copy; 2024 TechWave Online Teacher Training</p>

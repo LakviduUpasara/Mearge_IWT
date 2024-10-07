@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedback Form</title>
 
-    <link rel="stylesheet" href="feedback_update.css">
+    <link rel="stylesheet" href="styles/feedback_update.css">
 </head>
 <body>
+            <?php
+
+            include    'Hederfootor.php';
+            ManagemntNavbr() ;  
+
+            ?>
     <div class="container">
         <h2>Feedback Update</h2>
         <div class="feedback-form">
-            <form method="post" action="update.php">
+            <form method="post" action="Feedbackupdate.php">
                 <div class="form-group">
                     <label for="name">Feedback ID:</label>
                     <input type="text" id="name" name="f_id" placeholder="Enter your ID" required>

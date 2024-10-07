@@ -125,7 +125,7 @@
                         </div>
                     <div class="button-container">
                         <button style="width:100px" type="Submit" name="add">Add</button>
-                        <button onclick="confirmUpdate()" style="width:100px" type="Submit" name="update">Update</button>
+                        <button onclick="return confirmUpdate()" style="width:100px" type="Submit" name="update">Update</button>
                     </div>
                     <!-- Js file of confirm update -->
                     <script src="js/confirmUpdate.js"></script>
@@ -139,7 +139,7 @@
  <div id="response">
         <?php
         if (isset($_SESSION['message'])) {
-            echo $_SESSION['message'];
+            echo "<script>alert('".$_SESSION['message']."');</script>";
             // Clear the session message after displaying it
             unset($_SESSION['message']);
         }

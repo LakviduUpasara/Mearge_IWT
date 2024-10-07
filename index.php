@@ -1,5 +1,13 @@
 <!--Nadeeja - home page-->
+<?php
+            if(isset($_SESSION['success']))
+            {
 
+            echo" <script>alert('Registration failed') ;</script>" ;
+            }
+            unset($_SESSION['error']);
+            unset($_SESSION['success']);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

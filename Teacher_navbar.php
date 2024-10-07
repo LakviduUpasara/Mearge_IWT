@@ -67,7 +67,7 @@
             </div>
 
                 <div class="container" style="background-color:#f1f1f1">
-                <input type="submit" id="button_3" >
+                <input type="submit" id="button_3" name = "update" >
                 
                 </div> 
             </form>

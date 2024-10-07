@@ -26,6 +26,9 @@
 
             <div class="form-elements">
                 <?php 
+                     if (session_status() == PHP_SESSION_NONE) {
+                        session_start();
+                    }
                     if(isset($_SESSION['error']))
                     {
                         echo "<p id='message'>".$_SESSION['error']."</p>" ;

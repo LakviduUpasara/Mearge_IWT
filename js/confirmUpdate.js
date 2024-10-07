@@ -1,13 +1,13 @@
 /* Nadeeja - confirmUpdate js */
 function confirmUpdate(){
     var a = confirm("Confirm Update: Are you sure you want to apply these changes?");
-    if(a==true)
-    {
+    
+    if(a) { // User clicked "OK"
         alert("Updated Successfully");
-    }
-    else
-    {
+        return true; // Allow form submission or process to continue
+    } else { // User clicked "Cancel"
         alert("Not Updated");
+        return false; // Prevent further action
     }
 }
 function confirmLogout() {
@@ -19,3 +19,8 @@ function confirmLogout() {
         alert("Logout canceled.");   
     }
 }
+function replyupdate() {
+    
+  alert("Replied");
+}
+

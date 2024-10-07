@@ -1,3 +1,18 @@
+<?php
+
+            if (session_status() == PHP_SESSION_NONE) {
+                session_start();
+            }
+            if(isset($_SESSION['error']))
+            {
+          
+                echo" <script>alert(' ". $_SESSION['error']."') ;</script>" ;
+
+            } 
+            unset($_SESSION['error']);
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +29,7 @@
 <body>
 
     <?php include "./Teacher_navbar.php";?>
+        <!-- Announcement Section -->
         <div class="announcement">
         <h1 class="announcement-heading">Announcements</h1>
         <div class="announcement-content">
@@ -26,8 +42,8 @@
 
             ?>
         </div>
-   
- 
+    </div>
+
     <div class="courses-section">
      <h1>Course Details</h1>
     
@@ -39,8 +55,8 @@
         </div>
     </div>
 
-    
-    <?php 
+
+        <?php 
              require './footer.php';
         ?>
 

@@ -1,3 +1,22 @@
+<?php
+
+    if (session_status() == PHP_SESSION_NONE) {
+      session_start();
+    }
+    if(isset($_SESSION['error']))
+    {
+       
+        echo" <script>alert('successfully completed ') ;</script>" ;
+
+    } else if(isset($_SESSION['success']))
+    {
+    
+      echo" <script>alert('unsuccessfully completed') ;</script>" ;
+    }
+      unset($_SESSION['error']);
+      unset($_SESSION['success']);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,27 +27,14 @@
 
   <link rel ="stylesheet" type="text/css" href="./styles/support_dahsboard_style.css">
   <!--header and footer-->
-  <link rel = "stylesheet" type= "text/css" href="./styles/headerFooterIMESHA.css">
+ 
 
   <script defer src="./js/suppDash.js"></script>
 
 </head>
 <body>
 
-<div class="sup_header">
-  <img src="images/logo.png" alt="logo"class="logo">
-  
-  <div class="sup_navbar">
-  <ul>
-      <li><a class="nav" href= "supportDashboard.php">Announcements</a></li>
-     <li><a class="nav" href="supportDashboard.php">Ticket Review</a></li>
-     <li><a class="nav" href="admin_support.php">Admin Support</a></li>
-     <li><a class="nav" href="#">User Profile</a></li>
-  </div>
-  <br><br>
-
-  <a href=home.php><img src="images/arrow1.png" alt="arrow1"class="arrow"></a>
-</div>
+<?php include 'sup_nav.php' ;?>
 
 <main ><!--<div class="banner">-->
   <div class="content">
@@ -129,7 +135,7 @@
       </fieldset>
 
             <!-- reply-->
-        <form id = "formReply" method="post" action="sup.php">
+        <form id = "formReply" method="POST" action="sup.php">
           <div class="Pop-reply" id="pop-Rpl" >
 
             <label for ="ticket_id">Ticket Id</label><br>
@@ -138,7 +144,7 @@
             <label for="reply">Reply</label><br>
             <textarea id="reply" name="reply" placeholder=" reply" required></textarea> 
             
-            <button type = "submit" class="button" onclick="closePopRpl()">send</Button>
+            <button type = "submit" class="button" name ="update" onclick="closePopRpl()">send</Button>
           </div>
         </form>
 
@@ -150,7 +156,7 @@
             <label for ="ticket_id">Ticket Id</label><br><br>
             <input type="text" id="Delete_tick_id" name="tick_id" required> <br>
 
-            <button type = "submit" class="button" onclick="closeDelete()">Delete</Button>
+            <button type = "submit" class="button" name="delete" onclick="closeDelete()">Delete</Button>
           </div>
         </form>
       </div>

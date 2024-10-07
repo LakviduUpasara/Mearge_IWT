@@ -8,7 +8,7 @@
     <title>Admin Support</title>
     <link rel ="stylesheet" type="text/css" href="./styles/admin_support_style.css">
     <!--header and footer-->
-    <link rel = "stylesheet" type= "text/css" href="./styles/headerFooterIMESHA.css">
+    
     
 </head>  
 <body>
