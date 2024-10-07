@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $userEmail = $_POST["semail"];
     $userPwd = $_POST["password"];
 
-   
+
    
     if (isset($_POST['updateUser'])) {
         

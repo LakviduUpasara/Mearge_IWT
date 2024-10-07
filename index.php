@@ -3,7 +3,7 @@
             if(isset($_SESSION['success']))
             {
 
-            echo" <script>alert('Registration failed') ;</script>" ;
+            echo" <script>alert('Registration successfully') ;</script>" ;
             }
             unset($_SESSION['error']);
             unset($_SESSION['success']);

@@ -29,11 +29,12 @@
                         </a>
                     </div>
                     <div>
-                     <a href="logout.php" class="logout-label">Logout</a>
-                    </div>
-                  
-                </div>
-        </div>
+         <a onclick="confirmLogout();" href="javascript:void(0);" class="logout-label">Logout</a>
+    </div>
+    </div>
+</div>
+    <!-- Js file of confirm update -->
+    <script src="js/confirmUpdate.js"></script>
 
 
     

@@ -24,14 +24,6 @@
             
     ?>
 
-     <!-- Search bar -->
-     
-            <div class="search-bar">
-                <input type="text" placeholder="Search..." id="search-input" name ="Searchkey">
-                     <button type="submit"   id="button-search" class="search-button" name ="AnnouSearch-Annousment">
-                         <i class="fa fa-search"></i> Search
-                     </button>
-            </div>
 
 
     <!-- Announcement Section -->

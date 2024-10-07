@@ -35,3 +35,5 @@
     </div>
     </div>
 </div>
+    <!-- Js file of confirm update -->
+    <script src="js/confirmUpdate.js"></script>

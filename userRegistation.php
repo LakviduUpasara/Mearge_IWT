@@ -1,3 +1,15 @@
+<?php
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
+            if(isset($_SESSION['error']))
+            {
+
+            echo" <script>alert('Registration unsuccessfully') ;</script>" ;
+            }
+            unset($_SESSION['error']);
+            unset($_SESSION['success']);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,13 +32,6 @@
     <div class="wrapper">
         <div class="title">Join Now</div>
         <form method="post" action="UserregisterInsert.php" id="form" onsubmit=" return validateForm()">
-            <?php
-            if (isset($_SESSION['error'])) {
-                echo "<script>alert('Your registration was successfully completed');</script>";
-            } 
-            unset($_SESSION['error']);
-            unset($_SESSION['success']);
-            ?>
             <div class="field">
                 <input type="text" name="firstname" id="firstname" required>
                 <label for="firstname">First name</label>
@@ -48,7 +53,7 @@
                 <label for="password">Password</label>
             </div>
             <div class="field">
-                <input type="password" name="confirm-password" id="confirm-password" required>
+                <input type="password" name="confirm-password" id="confirm-password " required>
                 <label for="confirm-password">Confirm Password</label>
             </div>
             <div class="btn">

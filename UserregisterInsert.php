@@ -13,6 +13,13 @@ $userEmail = $_POST["email"];
 $userPwd = $_POST["password"];
 $User_role = "teacher";
 
+if ($userPwd !== $_POST['confirm-password'])
+{
+
+      $_SESSION['error']= "Failed to update user details!";
+      header('location: userRegistation.php');
+
+}else {
 
 
 $sqluser = "INSERT INTO user_detail (First_Name, Last_Name, Phone, Email, Password, User_role) 
@@ -28,5 +35,6 @@ if ($con->query($sqluser)) {
 }
 
 $con->close();
+}
 
 ?>

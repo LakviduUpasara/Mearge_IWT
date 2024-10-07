@@ -1,15 +1,16 @@
 function validateForm(event) {
+    event.preventDefault(); // Prevent the form from submitting
 
     // Get values from the form fields
-    let firstName = document.getElementById("firstname").value;
-    let lastName = document.getElementById("lastname").value;
-    let phoneNumber = document.getElementById("phone-number").value;
-    let email = document.getElementById("email").value;
-    let password = document.getElementById("password").value;
-    let confirmPassword = document.getElementById("confirm-password").value;
+    const firstName = document.getElementById("firstname").value;
+    const lastName = document.getElementById("lastname").value;
+    const phoneNumber = document.getElementById("phone-number").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const confirmPassword = document.getElementById("confirm-password").value;
 
     // Check if any field is empty and alert the user
-    if (!firstName) {
+    if (firstName === "") {
         alert("First name must be filled out");
         return false;
     } else if (lastName === "") {
@@ -33,11 +34,14 @@ function validateForm(event) {
     if (password !== confirmPassword) {
         alert("Passwords do not match");
         return false;
+        
+    }else
+    {
+
+          // If all checks pass, submit the form
+            document.getElementById("form").submit();
+            return true;
     }
 
-    return true;
-    
+  
 }
-
-
-
