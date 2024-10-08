@@ -57,8 +57,10 @@
                         $_SESSION['User_role']  = $user['User_role'];
                         $_SESSION ['User_id'] = $user['User_id'];
                         $_SESSION ['First_Name	'] = $user['User_name'];
+                        $_SESSION['email'] =  $user['Email'];
 
-                        echo  $user_role;
+
+                       // echo  $user_role;
                         
                         // Redirect based on user role
                         switch ($user_role) {
