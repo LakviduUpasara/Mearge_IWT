@@ -1,7 +1,6 @@
 <?php
-ob_start(); 
+    ob_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,18 +30,20 @@ ob_start();
             <div class="form-elements">
                 <?php 
                     
-                    if (session_status() == PHP_SESSION_NONE) {
-                         session_start();
-                    }
-                
-                    
-                    if(isset($_SESSION['error']))
-                    {
-                        echo "<p id='message'>".$_SESSION['error']."</p>" ;
-                        echo" <script>alert('Email or Password is incorrect ') ;</script>" ;
+                  
+                        if (session_status() == PHP_SESSION_NONE) {
+                            session_start();
+                        }
 
-                    } 
-                    unset($_SESSION['error']);
+                        if (isset($_SESSION['error'])) {
+                          
+                            echo "<p id='message'>" . $_SESSION['error'] . "</p>";
+                            
+                            echo "<script>alert('Email or Password is incorrect');</script>";
+                            
+        
+                            unset($_SESSION['error']);
+                        }
                 
                 ?>
 
@@ -89,6 +90,8 @@ ob_start();
 </div>
 </body>
 </html>
-<?php
-    ob_end_flush(); 
+<?php 
+
+    ob_end_flush();
+
 ?>

@@ -28,7 +28,10 @@
 </head>
 <body>
 
-    <?php include "./Teacher_navbar.php";?>
+        <?php
+                 include    'Hederfootor.php';
+                 ManagemntNavbr(); 
+        ?>
         <!-- Announcement Section -->
         <div class="announcement">
         <h1 class="announcement-heading">Announcements</h1>

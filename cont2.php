@@ -1,9 +1,11 @@
 <?php
-//imesha
+// Imesha
+
+session_start(); 
 
 require 'config2.php';
 
-// Database connection
+
 $conn = $con;
 
 function createTicketId($conn)
@@ -14,9 +16,9 @@ function createTicketId($conn)
     $result = $stmt->get_result();
     
     if ($row = $result->fetch_assoc()) {
-        $Ticket_id = $row['Ticket_id'] + 1; // Assuming Ticket_id is the correct column name
+        $Ticket_id = $row['Ticket_id'] + 1; 
     } else {
-        $Ticket_id = 1; // Starting Ticket_id if no records exist
+        $Ticket_id = 1; 
     }
     return $Ticket_id;
 }
@@ -29,9 +31,9 @@ function createContactId($conn)
     $result = $stmt->get_result();
     
     if ($row = $result->fetch_assoc()) {
-        $contact_id = $row['Contact_id'] + 1; // Assuming Contact_id is the correct column name
+        $contact_id = $row['Contact_id'] + 1; 
     } else {
-        $contact_id = 1; // Starting Contact_id if no records exist
+        $contact_id = 1; 
     }
     return $contact_id;
 }
@@ -39,48 +41,50 @@ function createContactId($conn)
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['tickets'])) {       
         $Ticket_id = createTicketId($conn);
-        // Ticket details
+        
         $Subject = $_POST["subject"];
         $Email = $_POST["email"];
         $Message = $_POST["message"];
-        $reply = ''; // Reply can be set as needed
+        $reply = '';
         
-        // Prepared statement for inserting ticket
+        
         $query1 = "INSERT INTO tickets (Ticket_id, Subject, Email, Message, Reply) VALUES (?, ?, ?, ?, ?)";
         $stmt1 = $conn->prepare($query1);
         $stmt1->bind_param('issss', $Ticket_id, $Subject, $Email, $Message, $reply);
 
         if ($stmt1->execute()) {
-            echo " <script> alert ('Data inserted successfully');";
-            header("Location:.cont2.php") ;
+            $_SESSION['success'] = "Ticket data inserted successfully";
+            header("Location: contactUs.php");
+            exit(); 
         } else {
-            header("Location:.cont2.php") ;
-            echo "Insertion failed: " . $conn->error;
+            $_SESSION['error'] = "Ticket data insertion failed: " . $stmt1->error;
+            header("Location: contactUs.php");
+            exit(); 
         }
-        
+
     } elseif (isset($_POST['contact'])) {
         $contact_id = createContactId($conn);
         $Name = $_POST["Cname"];
         $Phone_no = $_POST["Phone"];
         $Message = $_POST["cmessage"];
         
-        // Prepared statement for inserting contact
+      
         $query2 = "INSERT INTO contact_us (Contact_id, Name, Phone_no, Message) VALUES (?, ?, ?, ?)";
         $stmt2 = $conn->prepare($query2);
         $stmt2->bind_param('isss', $contact_id, $Name, $Phone_no, $Message);
 
         if ($stmt2->execute()) {
-            header("Location:.cont2.php") ;
-            echo " <script> alert ('Data inserted successfully');</script>";
+            $_SESSION['success'] = "Contact data inserted successfully";
+            header("Location: contactUs.php");
+            exit(); 
         } else {
-            header("Location:.cont2.php") ;
-
-            echo "Insertion failed: " . $conn->error;
+            $_SESSION['error'] = "Contact data insertion failed: " . $stmt2->error;
+            header("Location: contactUs.php");
+            exit(); 
         }
     }
 }
 
-// Close connection if needed
-$conn->close();
 
+$conn->close();
 ?>

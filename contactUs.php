@@ -1,3 +1,17 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start(); // Ensure session is started
+}
+
+if (isset($_SESSION['success'])) {
+    echo "<script>alert('".$_SESSION['success']."');</script>"; // Show success message
+    unset($_SESSION['success']); // Correct: Unset success after showing it
+
+} elseif (isset($_SESSION['error'])) {
+    echo "<script>alert('".$_SESSION['error']."');</script>"; // Show error message
+    unset($_SESSION['error']); // Correct: Unset error after showing it
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <html>

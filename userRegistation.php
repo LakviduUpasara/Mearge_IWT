@@ -5,7 +5,7 @@
             if(isset($_SESSION['error']))
             {
 
-            echo" <script>alert('Registration unsuccessfully') ;</script>" ;
+            echo"<script>alert('".$_SESSION['error']."') ;</script>" ;
             }
             unset($_SESSION['error']);
             unset($_SESSION['success']);

@@ -1,13 +1,20 @@
 <!--Nadeeja - home page-->
 <?php
-            if(isset($_SESSION['success']))
+          
+       if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
+          
+          if(isset($_SESSION['success']))
             {
 
-            echo" <script>alert('Registration successfully') ;</script>" ;
+                echo" <script>alert('Registration successfully') ;</script>" ;
+                unset($_SESSION['success']);
+                unset($_SESSION['error']);
             }
-            unset($_SESSION['error']);
-            unset($_SESSION['success']);
-?>
+
+    ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

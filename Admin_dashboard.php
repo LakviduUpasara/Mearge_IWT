@@ -26,7 +26,7 @@
             <div class = "logout-side">
 
     <div class="profile">
-        <a href="userprofilemanagement.php">
+        <a href="userprofile.php">
            <img src="./images/user-icon.png" alt="User Profile">
         </a>
     </div>
@@ -144,7 +144,7 @@
     // Execute the query to count the number of users with the 'Lecture' role
     $result = mysqli_query($con, "SELECT COUNT(User_id) AS lecture_count 
                                     FROM user_detail 
-                                        WHERE User_role = 'Lecture'");
+                                        WHERE User_role = 'lecture'");
 
     if ($result) 
     {
@@ -164,7 +164,7 @@
       // Execute the query to count the number of users with the 'Teacher-trainee' role
       $result = mysqli_query($con, "SELECT COUNT(User_id) AS Teacher_trainee_count 
                                         FROM user_detail 
-                                            WHERE User_role = 'Teacher-trainee'");
+                                            WHERE User_role = 'teacher'");
 
       if ($result) 
       {

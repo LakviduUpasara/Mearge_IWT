@@ -1,19 +1,19 @@
 <?php
-     if (session_status() == PHP_SESSION_NONE) {
+    
         session_start();
-    }
-     if(isset($_SESSION['error']))
+
+     if(isset($_SESSION['success']))
      {
-        
-         echo" <script>alert('User details updated successfully') ;</script>" ;
+         echo" <script>alert(' ".$_SESSION['success']."') ;</script>" ;
  
-     } else if(isset($_SESSION['success']))
+     } else if(isset($_SESSION['error']))
      {
-     
-       echo" <script>alert('Failed to update user details') ;</script>" ;
+       
+         echo" <script>alert(' ".$_SESSION['error']."') ;</script>" ;
      }
        unset($_SESSION['error']);
        unset($_SESSION['success']);
+      
 ?>
 <!--table of user profiles-->
 <!DOCTYPE html>
@@ -52,18 +52,8 @@
                 
             <?php
             require './config2.php';
-
             
-
-            
-            
-             $userID = $_SESSION['User_id'];
-               
-
-                
-                
-
-              
+             $userID = $_SESSION['User_id'];  
             $sql = "SELECT User_id ,First_Name,Last_Name,Phone,Email  FROM user_detail  WHERE User_id  = '$userID'";
             $stmt = $con->prepare($sql);
             $stmt->execute();

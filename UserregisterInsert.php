@@ -16,7 +16,7 @@ $User_role = "teacher";
 if ($userPwd !== $_POST['confirm-password'])
 {
 
-      $_SESSION['error']= "Failed to update user details!";
+      $_SESSION['error']= "Passwords do not match!";
       header('location: userRegistation.php');
 
 }else {
@@ -26,6 +26,7 @@ $sqluser = "INSERT INTO user_detail (First_Name, Last_Name, Phone, Email, Passwo
             VALUES ('$userFname', '$userLname', '$userPhone', '$userEmail', '$userPwd', '$User_role')";
 
 if ($con->query($sqluser)) {
+    
     $_SESSION['success'] = "Your registration was successfully completed";
     header("Location: index.php");
 } else {

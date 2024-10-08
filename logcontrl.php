@@ -88,10 +88,9 @@
                     } else 
                     {
                         // if passored or email incorrct error massage 
+                        $_SESSION['error'] = "Invalid Email or Password";
                         header("Location: ./index.php");
-                        $_SESSION ['error'] = "Invalid Email  or Password"; 
                        
-
                         exit();
                     }
 

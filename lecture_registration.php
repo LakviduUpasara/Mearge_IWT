@@ -27,7 +27,7 @@
             <div class = "logout-side">
 
     <div class="profile">
-        <a href="userprofilemanagement.php">
+        <a href="userprofile.php">
            <img src="./images/user-icon.png" alt="User Profile">
         </a>
     </div>
