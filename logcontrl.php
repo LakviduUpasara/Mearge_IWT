@@ -40,7 +40,7 @@
                         if (isset( $_POST['remember'])) {
                             setcookie('password', $user['Password'], time() + (86400 * 30), "/"); // 1 month
                             setcookie('email', $user['Email'], time() + (86400 * 30), "/");
-                            setcookie('User_role', $user['User_role '], time() + (86400 * 30), "/");
+                           // setcookie('User_role', $user['User_role '], time() + (86400 * 30), "/");
 
                             
                             

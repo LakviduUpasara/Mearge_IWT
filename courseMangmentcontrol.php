@@ -11,15 +11,17 @@ $conn = $con;
 function LoadcourseDetail()
 {
     require './config2.php'; 
-    $query = "SELECT * FROM course_detail";
-    $_select_course_deatail = $con->prepare($query);
-    $_select_course_deatail->execute();
-    $Get_course_detail = $_select_course_deatail->get_result();
+
 
     $user_role = $_SESSION['User_role'];
 
     if ($user_role == 'lecture')
-    {
+    {       $query = "SELECT * FROM course_detail WHERE Email = ?";
+        
+             $_select_course_deatail = $con->prepare($query);
+             $_select_course_deatail->bind_param("s", $_SESSION['email']);
+             $_select_course_deatail->execute();
+             $Get_course_detail = $_select_course_deatail->get_result();
             echo  "<div class = 'display-full-content'> ";
             while ($row = $Get_course_detail->fetch_assoc()) {
                 $courseid = $row['Course_id'];
@@ -35,7 +37,12 @@ function LoadcourseDetail()
 
     }
     elseif ($user_role == 'teacher')
-    {
+    {   
+        $query = "SELECT * FROM course_detail";
+        $_select_course_deatail = $con->prepare($query);
+        $_select_course_deatail->execute();
+        $Get_course_detail = $_select_course_deatail->get_result();
+
         echo  "<div class = 'display-full-content'> ";
         while ($row = $Get_course_detail->fetch_assoc()) {
             $courseid = $row['Course_id'];
@@ -60,62 +67,72 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $target = "images/Uploads/" . basename($course_image); 
     $course_name = $_POST['course_name'];
     $courseid = $_POST['course_id'];
-    $lecturer_Name = $_POST['lecturer_Name'];
+    $lecturer_Email = $_POST['lecturer_Email'];
 
-    if (isset($_POST['create-course'])) {
-           
-        $insertdata = $conn->prepare("INSERT INTO course_detail (Course_id, course_name, lecturer_name, course_image) VALUES (?, ?, ?, ?)");
-        $insertdata->bind_param("isss", $courseid, $course_name, $lecturer_Name, $target);
-
-        if ($insertdata->execute()) {
-            
-            echo "<script> alert('Course created successfully!'); window.location.href = 'lecture_course_dashbord.php'</script>";
-        } else {
-           
-            $error = "Error creating course: " . $conn->error;
-            echo "<script>alert('$error');</script>";
-        }
-    } elseif (isset($_POST['Update-course'])) {
+    if ($lecturer_Email !== $_SESSION['email'] )
+    {
         
-        $updateQuery = "UPDATE course_detail SET course_name = ?, lecturer_name = ?, course_image = ? WHERE Course_id = ?";
-        $stmt = $conn->prepare($updateQuery);
-        $stmt->bind_param("sssi", $course_name, $lecturer_Name, $target, $courseid);
+        echo "<script> alert('Enter Your Login Email!'); window.location.href = 'lecture_course_dashbord.php'</script>";
 
-        if ($stmt->execute()) {
-            echo "<script>alert('Course updated successfully!'); window.location.href = 'lecture_course_dashbord.php';</script>";
-        } else 
-        {
-           
-            $error = "Error updating course: " . $conn->error;
-            echo "<script>alert('$error');</script>";
-        }
-    }else if (isset($_POST['delete-course'])) {
-        
-        $course_id = $_POST['course_id'];
-
-        $sql = "delete  from Course_Resources WHERE Course_id = ?";
-
-            $Inseert_resource =  $con->prepare($sql);
-            $Inseert_resource ->bind_param('i',$course_id) ;
-            if ($Inseert_resource->execute())
-            {
-                $stmt = $conn->prepare("DELETE FROM course_detail WHERE Course_id = ?");
-                $stmt->bind_param("i", $course_id); 
+    }
     
-                if ($stmt->execute()) {
-                        echo "<script>alert('Course deleted successfully!'); window.location.href = 'lecture_course_dashbord.php';</script>";
-                 } else {
-                          echo "<script>alert('Error deleting course: " . $stmt->error . "'); window.location.href = 'lecture_course_dashbord.php';</script>";
-                }   
 
+    if (move_uploaded_file($_FILES['course_image']['tmp_name'], $target))  {
+
+        if (isset($_POST['create-course'])) {
+            
+            $insertdata = $conn->prepare("INSERT INTO course_detail (Course_id, course_name, Email, course_image) VALUES (?, ?, ?, ?)");
+            $insertdata->bind_param("isss", $courseid, $course_name, $lecturer_Email, $target);
+
+            if ($insertdata->execute()) {
+                
+                echo "<script> alert('Course created successfully!'); window.location.href = 'lecture_course_dashbord.php'</script>";
+            } else {
+            
+                $error = "Error creating course: " . $conn->error;
+                echo "<script>alert('$error');</script>";
             }
-            else
+        } elseif (isset($_POST['Update-course'])) {
+            
+            $updateQuery = "UPDATE course_detail SET course_name = ?, Email = ?, course_image = ? WHERE Course_id = ?";
+            $stmt = $conn->prepare($updateQuery);
+            $stmt->bind_param("sssi", $course_name, $lecturer_Email, $target, $courseid);
+
+            if ($stmt->execute()) {
+                echo "<script>alert('Course updated successfully!'); window.location.href = 'lecture_course_dashbord.php';</script>";
+            } else 
             {
-               
-               
+            
+                $error = "Error updating course: " . $conn->error;
+                echo "<script>alert('$error');</script>";
             }
-       
+        }else if (isset($_POST['delete-course'])) {
+            
+            $course_id = $_POST['course_id'];
+
+                 $sql = "delete  from Course_Resources WHERE Course_id = ?";
+                 $Inseert_resource =  $con->prepare($sql);
+                 $Inseert_resource ->bind_param('i',$course_id) ;
+
+                if ($Inseert_resource->execute())
+                {
+                    $stmt = $conn->prepare("DELETE FROM course_detail WHERE Course_id = ?");
+                    $stmt->bind_param("i", $course_id); 
+        
+                    if ($stmt->execute()) {
+                            echo "<script>alert('Course deleted successfully!'); window.location.href = 'lecture_course_dashbord.php';</script>";
+                    } else {
+                            echo "<script>alert('Error deleting course: " . $stmt->error . "'); window.location.href = 'lecture_course_dashbord.php';</script>";
+                    }   
+
+                }
+                
+        } 
         $stmt->close();
+    }
+    else 
+    {
+        echo "<script>alert('Please Upload Images!'); window.location.href = 'lecture_course_dashbord.php';</script>";
     }
 }
 ?>

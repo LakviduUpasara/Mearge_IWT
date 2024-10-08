@@ -29,14 +29,11 @@ if (!function_exists('Managemntfooter')) {
         $user_role = $_SESSION['User_role'];
         // Redirect based on user role
         switch ($user_role) {
-            case 'admin':
-                include 'Adminfooter.php';
-                break;
+        
             case 'lecture':
                 include 'footer.php';
                 break;
             case 'supportmember':
-                include 'sup_nav.php';
                 break;
             case 'teacher':
                 include 'footer.php';

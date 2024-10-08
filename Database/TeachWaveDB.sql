@@ -54,20 +54,19 @@ CREATE TABLE course_detail (
     Course_id INT PRIMARY KEY,
     course_name VARCHAR(255) NOT NULL,
     course_image VARCHAR(255) NOT NULL,
-    lecturer_name VARCHAR(255) NOT NULL
+    EMAIL VARCHAR(255) NOT NULL
 );
 
 -- Table 7: Course Resources
-
-course_resources	CREATE TABLE `course_resources` (
-  `Resource_id` int(11) NOT NULL,
-  `Link` text NOT NULL,
-  `Course_id` int(11) NOT NULL,
-  `Topic` varchar(255) NOT NULL,
-  PRIMARY KEY (`Resource_id`),
-  KEY `Course_id` (`Course_id`),
-  CONSTRAINT `course_resources_ibfk_1` FOREIGN KEY (`Course_id`) REFERENCES `course_detail` (`Course_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci	
+CREATE TABLE course_resources (
+  Resource_id int(11) NOT NULL,
+  Link text NOT NULL,
+  Course_id int(11) NOT NULL,
+  Topic varchar(255) NOT NULL,
+  PRIMARY KEY (Resource_id),
+  KEY Course_id (Course_id),
+  CONSTRAINT course_resources_ibfk_1 FOREIGN KEY (Course_id) REFERENCES course_detail (Course_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Table 8: admin_support
 

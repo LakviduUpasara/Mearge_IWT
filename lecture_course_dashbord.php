@@ -11,7 +11,7 @@
 
         <script src="js/lecdashbord.js" defer></script>
         <script src="js/coursemarnagment.js" defer></script>
-        <script src ="./js/massege.js"></script>
+        <script src ="js/courseemail.js"></script>
 </head>
 <body>
 
@@ -55,8 +55,10 @@
         <div class="popup" id="popup-form">
 
                 <div class ="close-btn" id ="close-btn " onclick="closeModal();">&times;</div>
+
+                <span id="error-message" style="color:red;"></span>
             
-                <form action="./courseMangmentcontrol.php" method="POST" enctype="multipart/form-data">
+                <form action="./courseMangmentcontrol.php" method="POST" enctype="multipart/form-data" onsubmit="EmailValidation();">
 
 
                  <h2 id="create-course-heding">Create Course</h2>
@@ -71,8 +73,8 @@
                     <input type="text" id="course_name" name="course_name" required>
                 </div>
                 <div class="form-elements">
-                    <label for="lecturer_name">Lecturer Name:</label><br>
-                    <input type="text" id="lecturer_name" name="lecturer_Name" required><br>
+                    <label for="lecturer_name">Lecturer Email:</label><br>
+                    <input type="text" id="lecturer_Email" name="lecturer_Email" required><br>
                 </div>
                 <div class="form-elements">
                     <label for="course_image">Course Image:</label><br>
