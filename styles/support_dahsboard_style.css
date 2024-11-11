@@ -26,55 +26,68 @@
   padding: 10px;
   text-align: left;
   background-color: #f6f7f9;
+  border: 2px solid #0d0b56;
+
 }
 
-/* tickets*/
-fieldset{
-  border: none;
-  margin: 0 auto;
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fa; 
+}
+.content h2 {
+  margin-top: 10px;
+  color: #0d0b56;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 600;
+}
+fieldset {
+  border: 2px solid #0d0b56;
+  margin: 20px auto;
   text-align: center;
   width: 70%;
-  justify-items: center;
+  border-radius: 10px;
+  background-color: #fff;
 }
 .table {
   width: 100%; 
-  margin: 0 auto;  
+  margin: 20px auto;
 }
-.table th, .table td {
-  border: 2px solid #fff;
-  padding: 10px;
+.table th,
+.table td {
+  border: 2px solid #0d0b56;
+  padding: 12px;
   text-align: left;
   background-color: #f2f2f2;
 }
 .button-grp {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   margin-top: 20px;
-  float: right;
 }
 .button {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   background-color: #007bff;
-  color: white;
+  color: #ffffff;
   font-weight: bold;
   cursor: pointer;
-  margin: 20px 0 20px 60px;
+  margin: 0 10px;
+  transition: background-color 0.3s, transform 0.2s;
 }
-.button:hover{
+.button:hover {
   cursor: pointer;
   background-color: #fff;
-  border-style: solid;
-  color: #007bff;
-  border-color: #0d0b56;
+  border: 2px solid #0d0b56;
+  color: #0d0b56;
+  transform: scale(1.05);
 }
-
-/*search*/
-.box{
+.box {
   position: relative;
+  margin: 20px auto;
 }
-
 .input {
   padding: 10px;
   width: 80px;
@@ -87,83 +100,85 @@ fieldset{
   outline: none;
   transition: .4s;
 }
-.box:hover input{
+.box:hover input {
   width: 400px;
-  background: #f2f2f2;
+  background: #f9f9f9;
   border-radius: 50px;
 }
-.box i{
+.box i {
   position: absolute;
   top: 50%;
   right: 15px;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   font-size: 26px;
   color: #ffd52d;
   transition: .2s;
 }
-.box:hover i{
+.box:hover i {
   opacity: 0;
   z-index: -1;
 }
-
-/* reply pop up*/
-.Pop-reply{
+.Pop-reply {
   border: solid 3px #007bff;
   margin: 0 auto;
-  width:450px;
+  width: 450px;
   height: 450px;
-  border-radius: 6px;
+  border-radius: 10px;
   position: absolute;
-  top: 50% ;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%)scale(0.8);
-  padding: 10px 30px ;
+  transform: translate(-50%, -50%) scale(0.8);
+  padding: 20px;
   background: #fff;
   visibility: hidden;
   transition: transform 0.4s, visibility 0.4s;
-  z-index: 1000; /* above all*/
+  z-index: 1000;
 }
-/*delete popup*/
-.Pop-del{
+.Pop-del {
   border: solid 3px #007bff;
   margin: 0 auto 0 10px;
-  width:250px;
+  width: 250px;
   height: 150px;
-  border-radius: 6px;
+  border-radius: 10px;
   position: absolute;
-  top: 50% ;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%)scale(0.8);
-  padding: 10px 30px ;
+  transform: translate(-50%, -50%) scale(0.8);
+  padding: 20px;
   background: #fff;
   visibility: hidden;
   transition: transform 0.4s, visibility 0.4s;
-  z-index: 1000; /* above all*/
+  z-index: 1000;
 }
-.Pop-reply label, .Pop-del label{
+.Pop-reply label, .Pop-del label {
   color: #000000;
   font-weight: bold;
 }
-.Pop-reply button{
+.Pop-reply button {
   float: inline-end;
   margin-bottom: 100%;
 }
-.Pop-reply textarea{
+.Pop-reply textarea {
   font-size: 16px;
   padding-top: 20px;
-  width:  400px;
+  width: 400px;
   border: solid 3px #ccc;
   height: 50%;
 }
-.openPopRpl, .openPopDel{
+.openPopRpl, .openPopDel {
   visibility: visible;
   opacity: 1;
-  transform: translate(-50%,-50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
   z-index: 1000;
 }
-/*active window*/
-.nav:active{
+.nav:active {
   background-color: #f6f7f9;
   color: #0d0b56;
   padding-block: 5px;
+}
+.error {
+  color: #e74c3c;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: bold;
 }

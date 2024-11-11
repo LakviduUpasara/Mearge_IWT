@@ -1,79 +1,75 @@
+<?php
+
+    if (session_status() == PHP_SESSION_NONE) {
+      session_start();
+    }
+    if(isset($_SESSION['success']))
+    {
+       
+        echo" <script>alert('successfully completed ') ;</script>" ;
+
+    } else if(isset($_SESSION['error']))
+    {
+    
+      echo" <script>alert('unsuccessfully completed') ;</script>" ;
+    }
+      unset($_SESSION['error']);
+      unset($_SESSION['success']);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Support Dashboard</title>
+  <title>TeachWave Online Teacher Trainer</title>
 
   <link rel ="stylesheet" type="text/css" href="./styles/support_dahsboard_style.css">
+  
   <!--header and footer-->
-  <link rel = "stylesheet" type= "text/css" href="./styles/headerFooterIMESHA.css">
+ 
 
   <script defer src="./js/suppDash.js"></script>
 
 </head>
 <body>
 
-<div class="sup_header">
-  <img src="images/logo.png" alt="logo"class="logo">
-  
-  <div class="sup_navbar">
-  <ul>
-      <li><a class="nav" href= "supportDashboard.php">Announcements</a></li>
-     <li><a class="nav" href="supportDashboard.php">Ticket Review</a></li>
-     <li><a class="nav" href="admin_support.php">Admin Support</a></li>
-     <li><a class="nav" href="#">User Profile</a></li>
-  </div>
-  <br><br>
-
-  <a href=home.php><img src="images/arrow1.png" alt="arrow1"class="arrow"></a>
-</div>
+<?php include 'sup_nav.php' ;?>
 
 <main ><!--<div class="banner">-->
   <div class="content">
-    <h2 id="announcemnts">Announcements</h2>
-    <div class="announcements">
-      <table class="Annu-table">
+  <h2 id="announcemnts">Announcements</h2>
+<div class="announcements">
+    <table class="Annu-table">
         <thead>
-          <tr>
-            <th>Topic</th>
-            <th>Description</th>
-          </tr>
+            <tr>
+                <th>Topic</th>
+                <th>Description</th>
+            </tr>
         </thead>
         <tbody>
+            <?php
+            require './config2.php';
 
-          <?php
-
-            require 'config5.php';
-
-            $sqlAnnou    = "SELECT Topic, Description FROM announcement_detail";
-
+            $sqlAnnou = "SELECT Topic, Description FROM announcement_detail";
             $announcement = $con->query($sqlAnnou);
 
-            if($announcement->num_rows > 0)//checking for the data in table
-            {
-                
-                while($row = $announcement->fetch_assoc())//fetch oone raw at a time
-                {
-                    echo"<tr>";
-                    echo "<td>".$row["Topic"]."</td>"."<td>".$row["Description"]."</td>";
-                    echo"</tr>";
+            if ($announcement->num_rows > 0) { // Checking for the data in the table
+                while ($row = $announcement->fetch_assoc()) { // Fetch one row at a time
+                    echo "<tr>";
+                    echo "<td>" . htmlspecialchars($row["Topic"]) . "</td>" . "<td>" . htmlspecialchars($row["Description"]) . "</td>";
+                    echo "</tr>";
                 }
-              
-            }
-            else
-            {
-                echo "<tr";
-                echo "<td>"."-"."</td>"."<td>"."No Announcements Yet"."</td>";
+            } else {
+                echo "<tr class='no-announcement'>";
+                echo "<td>-</td><td>No Announcements Yet</td>";
                 echo "</tr>";
             }
-
-          ?>
-
+            ?>
         </tbody>
-      </table>
-    </div>
+    </table>
+</div>
 
     <h2 id="ticket">Ticket Review</h2>
 
@@ -92,7 +88,8 @@
           
             <?php
 
-              require 'config5.php';
+              require './config2.php';
+
 
               $sqlTicket   = "SELECT Ticket_id, Email, Subject, Message FROM tickets";
 
@@ -128,7 +125,7 @@
       </fieldset>
 
             <!-- reply-->
-        <form id = "formReply" method="post" action="sup.php">
+        <form id = "formReply" method="POST" action="sup.php">
           <div class="Pop-reply" id="pop-Rpl" >
 
             <label for ="ticket_id">Ticket Id</label><br>
@@ -137,7 +134,7 @@
             <label for="reply">Reply</label><br>
             <textarea id="reply" name="reply" placeholder=" reply" required></textarea> 
             
-            <button type = "submit" class="button" onclick="closePopRpl()">send</Button>
+            <button type = "submit" class="button" name ="update" onclick="closePopRpl()">send</Button>
           </div>
         </form>
 
@@ -149,7 +146,7 @@
             <label for ="ticket_id">Ticket Id</label><br><br>
             <input type="text" id="Delete_tick_id" name="tick_id" required> <br>
 
-            <button type = "submit" class="button" onclick="closeDelete()">Delete</Button>
+            <button type = "submit" class="button" name="delete" onclick="closeDelete()">Delete</Button>
           </div>
         </form>
       </div>

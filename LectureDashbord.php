@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lecturer Dashboard</title>
+    <title>TeachWave Online Teacher Trainer</title>
     <link rel="stylesheet" href="styles/lecserdashtempt.css">
+    <link rel="stylesheet" href="styles/lecture_course_dashbord.css">
+
   
 
     
@@ -22,14 +24,6 @@
             
     ?>
 
-     <!-- Search bar -->
-     
-            <div class="search-bar">
-                <input type="text" placeholder="Search..." id="search-input" name ="Searchkey">
-                     <button type="submit"   id="button-search" class="search-button" name ="AnnouSearch-Annousment">
-                         <i class="fa fa-search"></i> Search
-                     </button>
-            </div>
 
 
     <!-- Announcement Section -->
@@ -43,6 +37,17 @@
                     Loadannousment() ;
 
 
+            ?>
+        </div>
+    </div>
+
+    <div class="courses-section">
+     <h1>Course Details</h1>
+    
+        <div class="courses">
+            <?php
+                    require './courseMangmentcontrol.php';
+                    LoadcourseDetail();
             ?>
         </div>
     </div>

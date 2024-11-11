@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TeachWave</title>
+    <title>TeachWave Online Teacher Trainer</title>
     <link rel ="stylesheet" href ="styles\user_management.css">
     <link rel ="stylesheet" href ="styles\admin_dashboard.css">
     <link rel ="stylesheet" href ="styles\admin_usertable.css">
@@ -27,7 +27,7 @@
             <div class = "logout-side">
 
     <div class="profile">
-        <a href="userprofilemanagement.php">
+        <a href="userprofile.php">
            <img src="./images/user-icon.png" alt="User Profile">
         </a>
     </div>
@@ -62,7 +62,7 @@
 
             $result = mysqli_query($con, "SELECT User_id, First_Name, Last_Name, Phone, Email, Password, User_role
                                 FROM user_detail
-                                WHERE User_role LIKE 'Teacher-trainee'");
+                                WHERE User_role LIKE 'teacher'");
             while($row = mysqli_fetch_assoc($result))
                 {
                     ?>
@@ -116,16 +116,16 @@
                             <label for="ur">User Role</label>
                             <div class="select-container">
                                 <select class="select-box" name="suserRole" id="userRole">
-                                    <option value="Lecture">Lecture</option>
-                                    <option value="Teacher-trainee">Teacher-trainee</option>
-                                    <option value="Admin">Admin</option>
-                                    <option value="Support-member">Support-member</option>
+                                    <option value="lecture">lecture</option>
+                                    <option value="teacher">teacher</option>
+                                    <option value="admin">admin</option>
+                                    <option value="supportmember">supportmember</option>
                                 </select>
                             </div>
                         </div>
                     <div class="button-container">
                         <button style="width:100px" type="Submit" name="add">Add</button>
-                        <button onclick="confirmUpdate()" style="width:100px" type="Submit" name="update">Update</button>
+                        <button onclick="return confirmUpdate()" style="width:100px" type="Submit" name="update">Update</button>
                     </div>
                     <!-- Js file of confirm update -->
                     <script src="js/confirmUpdate.js"></script>
@@ -139,7 +139,7 @@
  <div id="response">
         <?php
         if (isset($_SESSION['message'])) {
-            echo $_SESSION['message'];
+            echo "<script>alert('".$_SESSION['message']."');</script>";
             // Clear the session message after displaying it
             unset($_SESSION['message']);
         }

@@ -1,7 +1,12 @@
 <?php
 
 //imesha
-require 'config5.php';
+require 'config2.php';
+
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
 
 //update
 
@@ -18,11 +23,15 @@ else
 
    if($con->query($rep))//
     {
-       echo "success";
+        $_SESSION['success'] = "successfully completed" ;
+        header("Location: supportDashboard.php");
+
+    
     }
     else
     {
-        echo "unsuccessful".$con->error;
+        $_SESSION['error'] = "unsuccessfully completed" ;
+        header("Location: supportDashboard.php");
     }
 
 }
@@ -36,12 +45,16 @@ $sqlDel = "DELETE  FROM tickets  WHERE Ticket_id = '$tickId' ";
 
 if($con->query($sqlDel))
 {
-    echo "Deleted 'tickId'";
+    $_SESSION['success'] = "successfully completed" ;
+    header("Location: supportDashboard.php");
+
+
+
 }else{
-    echo "couldn't delete";
+    $_SESSION['error'] = "unsuccessfully completed" ;
+    header("Location: supportDashboard.php");
+
 }
 
 
 ?>
-
-

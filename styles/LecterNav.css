@@ -1,9 +1,11 @@
+
+/* Lakvidu Upasara */
 .search-button:hover {
-    background-color: #F2C464; /* Hover background color */
+    background-color: #F2C464; 
   }
   
   .search-button i {
-    margin-right: 5px; /* Add some space between icon and text */
+    margin-right: 5px; 
   }
 .logout-side{
 
@@ -18,9 +20,9 @@
 }
 
 .logout-side .logout-label:hover {
-    color: red; /* Changes color to red on hover */
-    padding: 10px; /* Adds padding on hover */
-    transition: 0.5s; /* Transition effect for color and padding */
+    color: red; 
+    padding: 10px; 
+    transition: 0.5s; 
 }
 .logout-side .profile{
 
@@ -97,10 +99,10 @@
     border: 1px solid #ccc;
 }
 .search-button {
-    background-color: #F7DC6F; /* Yellow background color */
-    color: #333; /* Text color */
-    border: none; /* Remove default border */
-    padding: 10px 20px; /* Add some padding */
-    font-size: 16px; /* Font size */
-    cursor: pointer; /* Change cursor to pointer */
+    background-color: #F7DC6F; 
+    color: #333;
+    border: none; 
+    padding: 10px 20px;
+    font-size: 16px; 
+    cursor: pointer; 
   }

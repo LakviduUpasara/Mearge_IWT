@@ -1,20 +1,17 @@
 <?php
+
 session_start();
 
-
-$_SESSION = array();
-
-
-if (ini_get("session.use_cookies")) {
-    $params = session_get_cookie_params();
-    setcookie(session_name(), '', time() - 42000,
-        $params["path"], $params["domain"], $params["secure"], $params["httponly"]
-    );
-}
-
+session_unset(); 
 session_destroy();
 
+// Delete cookies if set (optional)
+if (isset($_COOKIE['email']) && isset($_COOKIE['password'])) {
+    setcookie('email', '', time() - 3600, "/"); // Expire the email cookie
+    setcookie('password', '', time() - 3600, "/"); // Expire the password cookie
+}
 
-header("Location: home.php");
+// Redirect to the login page or any other page after logout
+header("Location: index.php");
 exit();
 ?>

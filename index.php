@@ -1,14 +1,28 @@
 <!--Nadeeja - home page-->
+<?php
+          
+       if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
+          
+          if(isset($_SESSION['success']))
+            {
 
+                echo" <script>alert('Registration successfully') ;</script>" ;
+                unset($_SESSION['success']);
+                unset($_SESSION['error']);
+            }
+
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TeachWave</title>
+    <title>TeachWave Online Teacher Trainer</title>
     <link rel= "stylesheet" href="./styles/index.css">
-    <link rel ="stylesheet" href ="styles\signpopup.css" >
-    <link rel ="stylesheet" href ="styles\feedbackSlider.css" >
+    <link rel ="stylesheet" href ="styles/signpopup.css" >
+    <link rel ="stylesheet" href ="styles/feedbackSlider.css" >
 </head>
 <body>
 
@@ -16,7 +30,7 @@
         <!--Navigation bar creating with logo--> 
 
         <?php
-        include "header_nav.php";
+        include "navbar.php";
         ?>
         
         <!--Feedbacks-->
@@ -40,14 +54,17 @@
         <!--Some detail about aboutus-->
         <div class="about-us">
             <h1>About Us</h1>
-            <p>Welcome to TeachWave 
-            <br>online teacher training platform</p>
+           <p>-Vision-
+            <br>To become the leading platform for professional development, equipping teachers with innovative tools and skills to inspire the next generation of learners.</p>
+            <p>-Mission-
+            <br>To offer dynamic, research-backed learning experiences that promote modern pedagogical approaches and support teachers in adapting to the ever-changing educational landscape.</p>
+            <!--sign in and join now buttons-->
 
             <!--sign in and join now buttons-->
          
             <div>
-                <button class ="home-btn" type="button" id = "body-signinbtn"><span></span>Sign In</button>
-                <button class ="home-btn" type="button"><span></span>Join Now</button>
+                <button class ="home-btn" type="button" id = "body-signinbtn" onclick=" openModal();"><span></span>Sign In</button>
+               <a href="userRegistation.php"><button class ="home-btn" type="button"><span></span>Join Now</button></a> 
 
             </div>
         </div>

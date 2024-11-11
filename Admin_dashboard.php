@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TeachWave</title>
+    <title>TeachWave Online Teacher Trainer</title>
     <link rel ="stylesheet" href ="styles\admin_dashboard.css">
     <link rel ="stylesheet" href ="styles\admin_footer.css">
 </head>
@@ -25,16 +25,18 @@
             </ul>
             <div class = "logout-side">
 
-    <div class="profile">
-        <a href="userprofilemanagement.php">
-           <img src="./images/user-icon.png" alt="User Profile">
-        </a>
-    </div>
-    <div>
-         <a onclick="confirmLogout();" href="javascript:void(0);" class="logout-label">Logout</a>
-    </div>
-    </div>
+<div class="profile">
+    <a href="userprofile.php">
+        <img src="./images/user-icon.png" alt="User Profile">
+    </a>
 </div>
+<div>
+<a onclick="confirmLogout();" href="javascript:void(0);" class="logout-label">Logout</a>
+</div>
+</div>
+</div>
+<!-- Js file of confirm update -->
+<script src="js/confirmUpdate.js"></script>
     <!-- Js file of confirm update -->
     <script src="js/confirmUpdate.js"></script>
 
@@ -144,7 +146,7 @@
     // Execute the query to count the number of users with the 'Lecture' role
     $result = mysqli_query($con, "SELECT COUNT(User_id) AS lecture_count 
                                     FROM user_detail 
-                                        WHERE User_role = 'Lecture'");
+                                        WHERE User_role = 'lecture'");
 
     if ($result) 
     {
@@ -164,7 +166,7 @@
       // Execute the query to count the number of users with the 'Teacher-trainee' role
       $result = mysqli_query($con, "SELECT COUNT(User_id) AS Teacher_trainee_count 
                                         FROM user_detail 
-                                            WHERE User_role = 'Teacher-trainee'");
+                                            WHERE User_role = 'teacher'");
 
       if ($result) 
       {

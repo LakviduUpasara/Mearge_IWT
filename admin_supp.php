@@ -1,7 +1,9 @@
 <?php
 //imesha
 
-require 'config5.php';
+session_start();
+
+require 'config2.php';
 
 //id generation
 $sql = "SELECT S_ticket_id FROM admin_support  ORDER BY S_ticket_id DESC LIMIT 1"; 
@@ -32,9 +34,11 @@ $query1 = "INSERT INTO admin_support VALUES ('$S_ticket_id','$User_Ticket_id', '
 
 if($con->query($query1))//hj 
 {
+    header("Location:admin_support.php") ;
     echo "success";
 }
 else{
+    header("Location:admin_support.php") ;
     echo "unsuccessful".$con->error;
 }
 

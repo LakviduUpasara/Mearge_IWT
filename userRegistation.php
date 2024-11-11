@@ -1,17 +1,37 @@
+<?php
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
+            if(isset($_SESSION['error']))
+            {
+
+            echo"<script>alert('".$_SESSION['error']."') ;</script>" ;
+            }
+            unset($_SESSION['error']);
+            unset($_SESSION['success']);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pop-Up Sign-Up Form</title>
-    <link rel="stylesheet" href="userRegistation.css">
+    <title>TeachWave Online Teacher Trainer</title>
+    <link rel="stylesheet" href="styles/userRegistation.css">
+    <link rel="stylesheet" href="styles/userReg.css">
 </head>
 <body>
-
-<!-- The pop-up form -->
+    <?php 
+    // Start the session before any output
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
+    include './navbar.php'; 
+    ?>
+    
+    <!-- The pop-up form -->
     <div class="wrapper">
-      <div class="title">Join Now</div>
-        <form method="post"  action="insert.php" id="form" onsubmit="return validateForm(event)">
+        <div class="title">Join Now</div>
+        <form method="post" action="UserregisterInsert.php" id="form" onsubmit=" return validateForm()">
             <div class="field">
                 <input type="text" name="firstname" id="firstname" required>
                 <label for="firstname">First name</label>
@@ -33,17 +53,16 @@
                 <label for="password">Password</label>
             </div>
             <div class="field">
-                <input type="password" name="confirm-password" id="confirm-password" required>
+                <input type="password" name="confirm-password" id="confirm-password " required>
                 <label for="confirm-password">Confirm Password</label>
             </div>
             <div class="btn">
                 <input type="submit" value="SIGN UP" id="btn" >
             </div>
         </form>
-      </div>
     </div>
-
-<script src="userRegistation.js"></script>
-
+    
+    <?php include "footer.php"; ?>
+    <script src="js/userRegistation.js"></script>
 </body>
 </html>

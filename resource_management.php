@@ -1,7 +1,9 @@
 <?php
         require './config2.php';
 
-        session_start();
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
 
         $course_id = $_GET['course_id']; 
         $query = "SELECT * FROM course_detail WHERE Course_id = ?";
@@ -18,7 +20,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TeachWave Online Teacher Trainer</title>
         <link rel="stylesheet" href="styles/Course_Resourse.css">
 </head>
 <body>

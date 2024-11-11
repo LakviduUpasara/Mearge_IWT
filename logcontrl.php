@@ -38,20 +38,29 @@
                         // if passored correct
 
                         if (isset( $_POST['remember'])) {
-                            $hashed_password = password_hash($user['Password'], PASSWORD_DEFAULT);
-                            setcookie('user_id', $user['User_id '], time() + (86400 * 30), "/");
-                            setcookie('password', $hashed_password, time() + (86400 * 30), "/"); // 1 month
-                            setcookie('email', $user['Email '], time() + (86400 * 30), "/"); // 1 month
+                            setcookie('password', $user['Password'], time() + (86400 * 30), "/"); // 1 month
+                            setcookie('email', $user['Email'], time() + (86400 * 30), "/");
+                           // setcookie('User_role', $user['User_role '], time() + (86400 * 30), "/");
+
+                            
+                            
+                             // 1 month
                             // 1 month
                         } else {
-                            $_SESSION['user_id'] = $user['id'];
+                            $_SESSION['user_id'] = $user['User_id'];
                             $_SESSION['password'] = $user['Password'];
                             $_SESSION['email']  = $user['Email'];
 
                         }
 
                         $user_role = $user['User_role'];
-                        echo  $user_role;
+                        $_SESSION['User_role']  = $user['User_role'];
+                        $_SESSION ['User_id'] = $user['User_id'];
+                        $_SESSION ['First_Name	'] = $user['User_name'];
+                        $_SESSION['email'] =  $user['Email'];
+
+
+                       // echo  $user_role;
                         
                         // Redirect based on user role
                         switch ($user_role) {
@@ -64,16 +73,16 @@
                                 exit();
                                 
                             case 'supportmember':
-                                header("Location: adminsupport.php");
+                                header("Location:supportDashboard.php");
                                 exit();
                                 
-                            case 'user':
+                            case 'teacher':
                                 header("Location: teacherdashboard.php");
                                 exit();
                             
                             default:
                                 // If role is unknown, show error
-                                header("Location: home.php?error=Unknown role");
+                                header("Location: index.php?error=Unknown role");
                                 exit();
                             
                                 
@@ -81,17 +90,15 @@
                     } else 
                     {
                         // if passored or email incorrct error massage 
-                        $_SESSION ['error'] = "Invalid Email  or Password"; 
-                        header("Location: home.php?");
-
+                        $_SESSION['error'] = "Invalid Email or Password";
+                        header("Location: ./index.php");
+                       
                         exit();
                     }
 
 
         }
 
-        $get_deatail->close();
-        $con->close();
             
         
 ?>

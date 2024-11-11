@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TeachWave</title>
+    <title>TeachWave Online Teacher Trainer</title>
     <link rel ="stylesheet" href ="styles\manage_announcement.css">
     <link rel ="stylesheet" href ="styles\admin_dashboard.css">
     <link rel ="stylesheet" href ="styles\admin_announcementtable.css">
@@ -27,7 +27,7 @@
             <div class = "logout-side">
 
     <div class="profile">
-        <a href="userprofilemanagement.php">
+        <a href="userprofile.php">
            <img src="./images/user-icon.png" alt="User Profile">
         </a>
     </div>
@@ -83,7 +83,7 @@
                         
                     <div class="button-container">
                         <button style="width:100px" type="Submit" name="add">Add</button>
-                        <button onclick="confirmUpdate()" style="width:100px" type="Submit" name="update">Update</button>
+                        <button onclick="return confirmUpdate()" style="width:100px" type="Submit" name="update">Update</button>
                        
                     </div>
                     <!-- Js file of confirm update -->
@@ -96,7 +96,8 @@
     <div id="response">
         <?php
         if (isset($_SESSION['message'])) {
-            echo $_SESSION['message'];
+          
+            echo "<script>alert('".$_SESSION['message']."');</script>";
             // Clear the session message after displaying it
             unset($_SESSION['message']);
         }

@@ -37,6 +37,7 @@ th{
     height: calc(80vh - 450px);
     overflow-y: scroll;
     height: 200px;
+    margin-bottom: 50px;
 }
 th,td{
     padding: 2px;

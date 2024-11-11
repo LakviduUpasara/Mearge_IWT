@@ -3,29 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TeachWave</title>
-    <link rel= "stylesheet" href="feedbackstyle.css">
-    <link rel= "stylesheet" href="headersithumini.css">
+    <title>TeachWave Online Teacher Trainer</title>
+    <link rel= "stylesheet" href="styles/feedbackstyle.css">
+    <link rel= "stylesheet" href="styles/headersithumini.css">
 
     <!--social media style sheet-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-
+            <?php
+                 include    'Hederfootor.php';
+                 ManagemntNavbr(); 
+              ?>
      <div class="banner">
 
         <!--Navigation bar creating with logo--> 
-        <div class="navbar">
-            <img src="logo1.png" alt="logo"class="logo">
-            <ul>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Course</a></li>
-                <li><a href="#">Support</a></li>
-                <li><a href="#">Feedback</a></li>
-                <li><a href="#">Sign Out</a></li>
-                <li><a href="#">Teach with us</a></li>
-            </ul>
-        </div>
+
 
         <div class="main-content">
             <h1>Feedback</h1>

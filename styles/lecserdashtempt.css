@@ -1,59 +1,68 @@
-/* General Styles */
 
+/* Lakvidu Upasara */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #dadddf;
-    background-size: cover;
+  font-family: sans-serif;
+  background-color: #1a1a2e; 
+  color: #e2e2e2; 
+  margin: 0; 
+  padding: 10px; 
 }
 
-  .notice-conetent{
+.notice-content {
+  border: 2px solid #0f3460; 
+  background-color: #16213e; 
+  padding: 10px; 
+  margin: 10px 0; 
+  border-radius: 8px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
+}
 
-    border-width: 2px;
-    background-color: #fff !important;
-    padding: 6px 5px!important ;
-    margin: 10px 0;
-  }
-  .notice-conetent h5{
-    text-align: justify;
-    margin: 2px 2px 2px ,2px;
-    padding: 2px ,2px ,2px,2px;
-  }
-  .note-heading{
+.notice-content h5 {
+  text-align: justify; 
+  margin: 5px 0; 
+  padding: 0; 
+  color: #ffffff; 
+}
 
-    border-width: 1px;
-    background-color: #e22f13 !important;
-    padding: 2px 2px!important ;
-    margin: 5px 0;
-    color: white;
-   
+.note-heading {
+  border: 1px solid #e94560; 
+  background-color: #0f3460; 
+  padding: 5px; 
+  margin: 5px 0; 
+  color: #ffffff; 
+  border-radius: 4px; 
+}
 
-  }
-  .note-heading h2{
+.note-heading h2 {
+  color: #ffffff; 
+  margin: 0; 
+  padding: 0; 
+}
 
-
-    color: white;
-    margin-left: 10 px;
-   
-
-  }
 /* Announcement */
 .announcement {
-    margin: 20px;
+  margin: 15px; 
+  padding: 15px; 
+  background-color: #16213e; 
+  border-radius: 8px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
 }
 
 .announcement-heading {
-    text-align: center;
-    font-size: 2em;
-    color: #0d0b56;
+  text-align: center; 
+  font-size: 1.8em; 
+  color: #e94560; 
+  margin-bottom: 10px; 
 }
 
 .announcement-content h1 {
-    font-size: 1.5em;
+  font-size: 1.5em; 
+  color: #00adb5; 
+  margin: 5px 0; 
 }
 
 .announcement-content h5 {
-    font-size: 1.2em;
-    color: #555;
+  font-size: 1.1em; 
+  color: #ffffff; 
+  margin: 5px 0; 
 }
-
-
