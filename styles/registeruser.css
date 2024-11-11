@@ -1,11 +1,11 @@
-/* Resetting default margin, padding, and box-sizing */
+/* sithmi */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Styling the body */
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f0f0f0;
@@ -15,7 +15,7 @@ body {
     height: 100vh;
 }
 
-/* Wrapper for centering the form */
+
 .wrapper {
     width: 400px;
     padding: 20px 30px;
@@ -24,7 +24,7 @@ body {
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Title styling */
+
 .title {
     text-align: center;
     font-size: 28px;
@@ -33,7 +33,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* General input field styles */
+
 .field {
     position: relative;
     margin-bottom: 20px;
@@ -49,7 +49,7 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Floating label styling */
+
 .field label {
     position: absolute;
     top: 50%;
@@ -61,7 +61,7 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Move label up when input is focused or filled */
+
 .field input:focus + label,
 .field input:not(:placeholder-shown) + label {
     top: 0;
@@ -71,12 +71,12 @@ body {
     padding: 0 5px;
 }
 
-/* Focus border color */
+
 .field input:focus {
     border-color: #0d0b56;
 }
 
-/* Button styling */
+
 .btn {
     text-align: center;
 }
@@ -97,7 +97,7 @@ body {
     background-color: #141267;
 }
 
-/* Responsive design for smaller screens */
+
 @media (max-width: 480px) {
     .wrapper {
         width: 90%;

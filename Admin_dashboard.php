@@ -25,16 +25,18 @@
             </ul>
             <div class = "logout-side">
 
-    <div class="profile">
-        <a href="userprofile.php">
-           <img src="./images/user-icon.png" alt="User Profile">
-        </a>
-    </div>
-    <div>
-         <a onclick="confirmLogout();" href="javascript:void(0);" class="logout-label">Logout</a>
-    </div>
-    </div>
+<div class="profile">
+    <a href="userprofile.php">
+        <img src="./images/user-icon.png" alt="User Profile">
+    </a>
 </div>
+<div>
+<a onclick="confirmLogout();" href="javascript:void(0);" class="logout-label">Logout</a>
+</div>
+</div>
+</div>
+<!-- Js file of confirm update -->
+<script src="js/confirmUpdate.js"></script>
     <!-- Js file of confirm update -->
     <script src="js/confirmUpdate.js"></script>
 

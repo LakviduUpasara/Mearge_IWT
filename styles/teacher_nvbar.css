@@ -1,9 +1,10 @@
+/* Nirasha */
 .search-button:hover {
-    background-color: #F2C464; /* Hover background color */
+    background-color: #F2C464; 
   }
   
   .search-button i {
-    margin-right: 5px; /* Add some space between icon and text */
+    margin-right: 5px; 
   }
 .logout-side{
 
@@ -18,9 +19,9 @@
 }
 
 .logout-side .logout-label:hover {
-    color: red; /* Changes color to red on hover */
-    padding: 10px; /* Adds padding on hover */
-    transition: 0.5s; /* Transition effect for color and padding */
+    color: red; 
+    padding: 10px; 
+    transition: 0.5s; 
 }
 .logout-side .profile{
 

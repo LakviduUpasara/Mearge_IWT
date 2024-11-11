@@ -54,6 +54,7 @@
             require './config2.php';
             
              $userID = $_SESSION['User_id'];  
+
             $sql = "SELECT User_id ,First_Name,Last_Name,Phone,Email  FROM user_detail  WHERE User_id  = '$userID'";
             $stmt = $con->prepare($sql);
             $stmt->execute();
@@ -73,7 +74,7 @@
             <div class="container">
         <div class="sidebar">
             <div class="profile-pic">
-                <img src="usericon.png" alt="Profile Picture">
+                <img src="./images/user-icon.png" alt="Profile Picture">
             </div>
         </div>
         <div class="main-content">
@@ -84,11 +85,11 @@
                 
                 <div class="input-item">
                     <label for="sid">User ID:</label>
-                    <input type="text" name="sid" id="sid" required><br><br>
+                    <input type="text" name="sid" id="sid" value = "<?php $row["User_id"]?>" ><br><br>
                 </div>
                 <div class="input-item">
                     <label for="sfname">First Name:</label>
-                    <input type="text" name="sfname" id="sfname" required><br><br>
+                    <input type="text" name="sfname" id="sfname" value = "<?php  $row["First_Name"]?>"><br><br>
                 </div>
         
                 <div class="input-item">

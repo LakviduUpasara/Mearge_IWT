@@ -1,3 +1,5 @@
+/* Lakvidu Upasara */
+
 body {
   font-family: Arial, sans-serif;
   background-color: #ffffff;
@@ -15,46 +17,13 @@ body {
 
   
 
-.image-container {
-  position: relative;
-  width: 300px; /* Adjust the size of the container */
-  height: 200px; /* Adjust based on your image size */
-}
-
-.image-container img {
-  width: 100%; /* Make the image fit the container */
-  height: 100%; /* Adjust to container height */
-  display: block;
-}
-
-.overlay-content {
-  position: absolute; /* Absolute positioning relative to the image container */
-  top: 0; /* Position it at the top of the image */
-  left: 0; /* Position it at the left of the image */
-  width: 100%; /* Full width of the container */
-  height: 100%; /* Full height of the container */
-  background-color: rgba(0, 0, 0, 0.5); /* Transparent dark background */
-  color: rgb(108, 99, 155); /* White text for contrast */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Center the content vertically */
-  align-items: center; /* Center the content horizontally */
-  text-align: center; /* Center the text */
-}
-
-.overlay-content h2, .overlay-content p {
-  margin: 0;
-  padding: 5px 10px;
-  font-size: 16px;
-}
-
 .course-box {
   background-color: #0d0b56;
   padding: 20px;
   text-align: left;
   border-radius: 15px;
   width: 250px;
-  height: 350px; /* Adjusted height to accommodate image */
+  height: 350px; 
   margin: 25px 30px 25px 25px;
   position: relative;
   display: inline-block;
@@ -67,9 +36,9 @@ body {
 
 .course-box img {
   width: 100%;
-  height: 150px; /* Fixed height for image */
-  object-fit: cover; /* Ensures the image covers the space without distortion */
-  border-radius: 10px 10px 0 0; /* Rounded corners for top part */
+  height: 150px; 
+  object-fit: cover; 
+  border-radius: 10px 10px 0 0; 
 }
 
 .course-box:hover {
@@ -244,14 +213,14 @@ body {
 }
 
 #create-course-btn {
-  background-color: #0d0b56; /* Dark blue background for consistency */
-  color: #FFFFFF; /* White text color */
-  border: 2px solid #1a19b3; /* Lighter blue border */
-  padding: 10px; /* Padding for comfortable clicking */
-  font-size: 16px; /* Font size */
-  font-weight: bold; /* Bold text for emphasis */
-  border-radius: 8px; /* Rounded corners */
-  cursor: pointer; /* Pointer cursor on hover */
+  background-color: #0d0b56; 
+  color: #FFFFFF; 
+  border: 2px solid #1a19b3; 
+  padding: 10px; 
+  font-size: 16px; 
+  font-weight: bold; 
+  border-radius: 8px; 
+  cursor: pointer; /* Pointer cursor on hoverers */ 
   transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 

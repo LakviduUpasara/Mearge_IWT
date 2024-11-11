@@ -5,91 +5,91 @@ body{
   font-family: sans-serif;
 }
 fieldset {
-  border: 2px solid #0d0b56; /* Theme color for the border */
-  margin: 30px auto; /* Center the fieldset */
-  width: 80%; /* Increased width for a more spacious layout */
+  border: 2px solid #0d0b56;
+  margin: 30px auto;
+  width: 80%; 
   padding: 25px;
-  border-radius: 15px; /* More pronounced rounded corners */
-  background-color: #f0f4f8; /* Soft light background for contrast */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+  border-radius: 15px;
+  background-color: #f0f4f8; 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
   font-family: sans-serif;
 }
 
 fieldset h2 {
-  margin-top: 0; /* Remove top margin for alignment */
-  color: #0d0b56; /* Use theme color for the heading */
+  margin-top: 0; 
+  color: #0d0b56; 
   text-align: center;
   margin-bottom: 20px;
-  font-size: 26px; /* Modern size */
-  font-weight: 600; /* Semi-bold for a contemporary look */
-  letter-spacing: 1px; /* Slight spacing for modern typography */
-  text-transform: uppercase; /* Uppercase for emphasis */
-  background: linear-gradient(45deg, #0d0b56, #4b6cb7); /* Gradient background */
-  -webkit-background-clip: text; /* Text color gradient */
-  -webkit-text-fill-color: transparent; /* Text color gradient */
+  font-size: 26px; 
+  font-weight: 600; 
+  letter-spacing: 1px; 
+  text-transform: uppercase; 
+  background: linear-gradient(45deg, #0d0b56, #4b6cb7);
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
 }
 
 label {
   display: block;
   margin-bottom: 5px;
-  color: #252424; /* Dark text for labels */
-  font-weight: 500; /* Medium weight */
+  color: #252424; 
+  font-weight: 500; 
 }
 
 input[type="text"], textarea {
   width: 100%;
-  padding: 12px; /* Increased padding for comfort */
+  padding: 12px; 
   border: 1px solid #ccc;
   box-sizing: border-box;
-  margin-bottom: 15px; /* Increased margin for spacing */
-  border-radius: 8px; /* Rounded corners */
-  background-color: #ffffff; /* White background for input fields */
-  transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+  margin-bottom: 15px;
+  border-radius: 8px; 
+  background-color: #ffffff;
+  transition: border-color 0.3s, box-shadow 0.3s; 
 }
 
 input[type="text"]:focus, textarea:focus {
-  border-color: #0d0b56; /* Change border color on focus */
-  box-shadow: 0 0 5px rgba(13, 11, 86, 0.5); /* Subtle shadow on focus */
-  outline: none; /* Remove default outline */
+  border-color: #0d0b56; 
+  box-shadow: 0 0 5px rgba(13, 11, 86, 0.5); 
+  outline: none; 
 }
 
 button {
-  padding: 12px 25px; /* Increased padding */
-  background-color: #0d0b56; /* Theme color */
+  padding: 12px 25px; 
+  background-color: #0d0b56; 
   color: #ffffff;
   border: none;
-  border-radius: 5px; /* Rounded corners */
+  border-radius: 5px; 
   cursor: pointer;
-  font-weight: bold; /* Emphasized text */
-  transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
-  margin-top: 15px; /* Space above the button */
+  font-weight: bold; 
+  transition: background-color 0.3s, transform 0.2s; 
+  margin-top: 15px; 
 }
 
 button:hover {
-  background-color: #4b6cb7; /* Lighter shade on hover */
-  color: #ffffff; /* Keep text color white */
-  border: 2px solid #0d0b56; /* Border on hover */
-  transform: scale(1.05); /* Slight scaling effect */
+  background-color: #4b6cb7; 
+  color: #ffffff; 
+  border: 2px solid #0d0b56; 
+  transform: scale(1.05); 
 }
 
 #submit {
-  float: right; /* Align to the right */
-  margin-top: 20px; /* Space above the button */
+  float: right;
+  margin-top: 20px; 
   padding: 10px 20px;
 }
 
 #submit:hover {
   cursor: pointer;
-  background-color: #ffffff; /* Light background on hover */
-  color: #0d0b56; /* Dark text on hover */
-  border: 2px solid #0d0b56; /* Border on hover */
-  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition */
+  background-color: #ffffff;
+  color: #0d0b56; 
+  border: 2px solid #0d0b56; 
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; 
 }
 
 /* Additional styles for a more cohesive design */
 .error {
-  color: #e74c3c; /* Red color for error messages */
+  color: #e74c3c; 
   margin-bottom: 15px;
-  text-align: center; /* Centered error messages */
-  font-weight: bold; /* Bold text for emphasis */
+  text-align: center;
+  font-weight: bold; 
 }

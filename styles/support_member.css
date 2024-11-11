@@ -1,4 +1,4 @@
-/* Basic form container */
+/* Nirasha */
 fieldset {
     border: 1px solid #ccc;
     padding: 20px;
@@ -15,7 +15,7 @@ fieldset {
     color: #333;
 }
 
-/* Labels styling */
+
 label {
     display: block;
     font-size: 1.1em;
@@ -23,7 +23,7 @@ label {
     color: #333;
 }
 
-/* Input fields styling */
+
 .form-input {
     width: 100%;
     padding: 10px;
@@ -34,7 +34,7 @@ label {
     box-sizing: border-box;
 }
 
-/* Textarea styling */
+
 .form-textarea {
     width: 100%;
     height: 100px;
@@ -47,7 +47,7 @@ label {
     resize: vertical;
 }
 
-/* Submit button styling */
+
 .submit-btn {
     background-color: #222;
     color: white;
@@ -62,7 +62,6 @@ label {
     background-color:#222;
 }
 
-/* Error message styling */
 .error {
     color: red;
     font-size: 0.9em;

@@ -1,11 +1,13 @@
-/* Resetting default margin and padding */
+
+/* Lakvidu */
+
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
-/* Styling the body to center content vertically and horizontally */
+
 body {
     display: flex;
     justify-content: center;
@@ -15,7 +17,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Form container centered on the page */
+
 .form-container {
     display: flex;
     justify-content: center;
@@ -24,7 +26,7 @@ body {
     height: 100%;
 }
 
-/* Styling the login form */
+
 .form-login {
     width: 380px;
     padding: 20px 30px;
@@ -33,7 +35,7 @@ body {
     border-radius: 10px;
 }
 
-/* Styling the heading */
+
 #sign-heading2 {
     text-align: center;
     color: #222;
@@ -41,12 +43,11 @@ body {
     font-size: 24px;
 }
 
-/* Styling the form elements */
+
 .form-elements {
     margin: 15px 0px;
 }
 
-/* Label styling */
 .form-elements label {
     font-size: 14px;
     color: #222;
@@ -54,7 +55,7 @@ body {
     margin-bottom: 5px;
 }
 
-/* Input field styling */
+
 .form-elements input[type="email"] {
     display: block;
     width: 100%;
@@ -66,7 +67,7 @@ body {
     margin-top: 5px;
 }
 
-/* Button styling */
+
 .form-elements button {
     width: 100%;
     padding: 10px;
@@ -83,7 +84,7 @@ body {
     background-color: #444;
 }
 
-/* Link styling */
+
 .form-elements a {
     display: block;
     text-align: center;

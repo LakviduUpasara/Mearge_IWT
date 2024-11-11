@@ -1,5 +1,7 @@
 <?php
-        require 'config2.php';
+      
+      // Sithmi nirasha
+      require 'config2.php';
 
 
 
